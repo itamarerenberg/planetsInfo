@@ -1,0 +1,10 @@
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\tests.exe.config
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\tests.exe
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\tests.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\LBT.RestSharp.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\LBT.RestSharp.xml
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\obj\Debug\tests.csproj.AssemblyReference.cache
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\obj\Debug\tests.csproj.CoreCompileInputs.cache
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\obj\Debug\tests.csproj.CopyComplete
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\obj\Debug\tests.exe
+C:\Users\elchanan\Source\Repos\planetsInfo\tests\obj\Debug\tests.pdb

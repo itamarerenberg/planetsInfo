@@ -12,11 +12,13 @@ namespace BL
     /// </summary>
     public class BLClass
     {
+        //picture of the day by immaga
         public string PoD()
         {
             throw new NotImplementedException();
         }
 
+        
         public PlanetInfo GetPlanetInfo(string pname)
         {
             throw new NotImplementedException();
