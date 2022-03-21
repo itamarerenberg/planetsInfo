@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LBT.RestSharp, Version=106.11.7.1, Culture=neutral, PublicKeyToken=71d158dc4477a6b4, processorArchitecture=MSIL">
+      <HintPath>..\planetsInfo\packages\LBT.RestSharp.106.11.7.1\lib\net452\LBT.RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +47,9 @@
   <ItemGroup>
     <Compile Include="PlanetInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
