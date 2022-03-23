@@ -1,0 +1,11 @@
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\BL.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\BL.pdb
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\BE.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\LBT.RestSharp.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\BE.pdb
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\LBT.RestSharp.xml
+C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.pdb

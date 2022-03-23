@@ -1,0 +1,17 @@
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\planetsInfo.exe.config
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\planetsInfo.exe
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\planetsInfo.pdb
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\LBT.RestSharp.dll
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\LBT.RestSharp.xml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\MainWindow.g.cs
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\App.g.cs
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo_MarkupCompile.cache
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo_MarkupCompile.lref
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\MainWindow.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.g.resources
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.Properties.Resources.resources
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.GenerateResource.cache
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.CoreCompileInputs.cache
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.CopyComplete
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.exe
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.pdb

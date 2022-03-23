@@ -11,11 +11,19 @@ namespace BE
     /// </summary>
     public class POD
     {
-        public string picName { get; set; }
-        public string picUrl { get; set; }
-        public string explenation { get; set; }
-        public DateTime date { get; set; }
-        public string imageCredit { get; set; }
-        public string tomorrowPic { get; set; }
+        public string copyright { get; set; }
+        public string date { get; set; }
+        public string explanation { get; set; }
+        public string hdurl { get; set; }
+        public string media_type { get; set; }
+        public string service_version { get; set; }
+        public string title { get; set; }
+        public string url { get; set; }
+
+        public override string ToString()
+        {
+            return copyright + ' ' + date + ' ' + explanation + ' ' + hdurl + ' ' +
+                media_type + ' ' + service_version + ' ' + title + ' ' + url;
+        }
     }
 }
