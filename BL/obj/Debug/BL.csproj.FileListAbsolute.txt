@@ -9,3 +9,14 @@ C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.csproj.CoreCompileInputs
 C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.dll
 C:\Users\erenb\source\repos\planetsInfo\BL\obj\Debug\BL.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\BL.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\BL.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\BE.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\LBT.RestSharp.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\BE.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\bin\Debug\LBT.RestSharp.xml
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\obj\Debug\BL.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\BL\obj\Debug\BL.pdb

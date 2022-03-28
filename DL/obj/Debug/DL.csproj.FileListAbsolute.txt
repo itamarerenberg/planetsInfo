@@ -23,7 +23,6 @@ C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\System.Threading.Tasks.E
 C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\System.ValueTuple.xml
 C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.csproj.AssemblyReference.cache
 C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.csproj.CoreCompileInputs.cache
-C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.csproj.CopyComplete
 C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.pdb
 C:\Users\erenb\source\repos\planetsInfo\DL\bin\Debug\DL.dll.config
@@ -58,3 +57,8 @@ C:\Users\erenb\source\repos\planetsInfo\DL\obj\Debug\DL.csproj.CoreCompileInputs
 C:\Users\erenb\source\repos\planetsInfo\DL\obj\Debug\DL.csproj.CopyComplete
 C:\Users\erenb\source\repos\planetsInfo\DL\obj\Debug\DL.dll
 C:\Users\erenb\source\repos\planetsInfo\DL\obj\Debug\DL.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\BE.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\BE.pdb
+C:\Users\elchanan\Source\Repos\planetsInfo\DL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\elchanan\Source\Repos\planetsInfo\DL\obj\Debug\DL.csproj.CopyComplete
