@@ -12,7 +12,7 @@ namespace DL
 {
     public class DLClass
     {
-        string API_KEY = DLConfig.NASA_API_KEY;
+        string API_KEY = DLConfig.get_nasa_API_key();
 
         public BE.POD GetPOD(DateTime ?date = null)
         {
@@ -39,6 +39,7 @@ namespace DL
 
         public List<BE.PlanetInfo> GetNearEarthAstroid(DateTime startDate, DateTime endDate,float minDiameter=-1,bool ?isDangerous=null)
         {
+            throw new NotImplementedException();
             var client = new RestClient("https://api.nasa.gov/neo/rest/v1/feed");
             client.Timeout = -1;
 

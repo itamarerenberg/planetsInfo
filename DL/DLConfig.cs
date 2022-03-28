@@ -2,12 +2,27 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DL
 {
-    internal class DLConfig
+    public static class DLConfig
     {
-        public static string NASA_API_KEY = "P8NQXJLV9cTtfJBeIxONVhKCasipTQ0JJsD0wi1f";
+        private static string config_file = @"C:\Users\erenb\source\repos\planetsInfo\DL\DLConfig.xml";
+        public static XElement root;
 
+        static DLConfig()
+        {
+            root = XElement.Load(config_file);
+        }
+
+        /// <summary>
+        /// get nasa's API key
+        /// </summary>
+        /// <param name="userName">corrently not in use - for forther extentions</param>
+        public static string get_nasa_API_key(string userName = "")
+        {
+            return root.Element("NASA_API_KEY").Value;
+        }
     }
 }

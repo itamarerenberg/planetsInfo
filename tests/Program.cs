@@ -12,9 +12,8 @@ namespace tests
     {
         static void Main(string[] args)
         {
-            var dlc = new DLClass();
-            Console.WriteLine(dlc.getPod());
-            Console.ReadKey();
+            Console.WriteLine(DL.DLConfig.get_nasa_API_key());
+            Console.ReadLine();
         }
     }
 }
