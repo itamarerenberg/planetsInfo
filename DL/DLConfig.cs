@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -8,12 +9,12 @@ namespace DL
 {
     public static class DLConfig
     {
-        private static string config_file = @"C:\Users\erenb\source\repos\planetsInfo\DL\DLConfig.xml";
+        private static string config_file_path = @"..\..\..\DL/DLConfig.xml";
         public static XElement root;
 
         static DLConfig()
         {
-            root = XElement.Load(config_file);
+            root = XElement.Load(config_file_path);
         }
 
         /// <summary>

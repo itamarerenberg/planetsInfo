@@ -39,7 +39,6 @@ namespace DL
 
         public List<BE.PlanetInfo> GetNearEarthAstroid(DateTime startDate, DateTime endDate,float minDiameter=-1,bool ?isDangerous=null)
         {
-            throw new NotImplementedException();
             var client = new RestClient("https://api.nasa.gov/neo/rest/v1/feed");
             client.Timeout = -1;
 
@@ -47,10 +46,13 @@ namespace DL
             request.AddParameter("api_key", API_KEY);
             request.AddParameter("start_date", startDate);
             request.AddParameter("end_date", endDate);
+            IRestResponse response = client.Execute(request);
+
             if (minDiameter != -1)
             {
                 request.AddParameter("end_date", minDiameter);
             }
+            return null;
         }
     }
 }
