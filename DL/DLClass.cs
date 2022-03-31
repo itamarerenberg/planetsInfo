@@ -12,11 +12,12 @@ namespace DL
 {
     public class DLClass
     {
-        string API_KEY = DLConfig.get_nasa_API_key();
+        //string API_KEY = DLConfig.get_nasa_API_key();
+        string API_KEY = "P8NQXJLV9cTtfJBeIxONVhKCasipTQ0JJsD0wi1f";
 
-        public BE.POD GetPOD(DateTime ?date = null)
+        public BE.POD GetPOD(DateTime date)
         {
-            DateTime dt = (DateTime)(date != null? date : DateTime.Now);
+            DateTime dt = date != null? date : DateTime.Now;
 
             //todo: move the apikey to a gitignore file 
             
@@ -229,6 +230,20 @@ namespace DL
             var a= JsonConvert.DeserializeObject<PlanetInfo.Root>(response.Content);
             Console.WriteLine(response.ToString());
             return a;
+        }
+
+        public BE.Planet GetSearchResult(string search)
+        {
+            var client = new RestClient("https://images-api.nasa.gov/search");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            request.AddParameter("q", search);
+            request.AddParameter("media_type", "image");
+            IRestResponse response = client.Execute(request);
+            var a = JsonConvert.DeserializeObject<Planet>(response.Content);
+            Console.WriteLine(a.ToString());
+            return a;
+
         }
     }
 }

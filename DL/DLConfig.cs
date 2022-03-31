@@ -8,7 +8,7 @@ namespace DL
 {
     public static class DLConfig
     {
-        private static string config_file = @"C:\Users\erenb\source\repos\planetsInfo\DL\DLConfig.xml";
+        private static string config_file = @"DLConfig.xml";
         public static XElement root;
 
         static DLConfig()

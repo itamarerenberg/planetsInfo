@@ -13,14 +13,14 @@ namespace tests
         static void Main(string[] args)
         {
             var dlc = new DLClass();
-            DateTime s = new DateTime(1999, 12, 1);
-            DateTime e = new DateTime(2020, 12, 1);
-            var a = dlc.GetNearEarthAstroid(s,e);
+            //DateTime s = new DateTime(1999, 12, 1);
+            //DateTime e = new DateTime(2020, 12, 1);
+            //var a = dlc.GetNearEarthAstroid(s,e);
             //foreach (var item in a)
             //{
             //    Console.WriteLine(item.ToString());
             //}
-            
+            dlc.GetSearchResult("moon");
             Console.ReadKey();
         }
     }
