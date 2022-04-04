@@ -137,7 +137,7 @@ namespace BE
         {
             public Links links { get; set; }
             public Page page { get; set; }
-            public NearEarthObject near_earth_objects { get; set; }
+            public List<NearEarthObject> near_earth_objects { get; set; }
         }
 
     }

@@ -14,3 +14,4 @@ C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.csproj.AssemblyRefere
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.pdb
+C:\Users\erenb\source\repos\planetsInfo\BE\obj\Debug\BE.csprojAssemblyReference.cache
