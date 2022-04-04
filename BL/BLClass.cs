@@ -1,4 +1,5 @@
 ﻿using BE;
+using DL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,16 +13,32 @@ namespace BL
     /// </summary>
     public class BLClass
     {
-        //picture of the day by immaga
-        public string PoD()
+        DLClass dlc;
+        public BLClass()
         {
-            throw new NotImplementedException();
+            dlc = new DLClass();
+        }
+        //picture of the day by immaga
+        public BE.POD PoD(DateTime? date = null)
+        {
+            return dlc.GetPOD((DateTime)date);
         }
 
-        
-        public PlanetInfo GetPlanetInfo(string pname)
+        public IEnumerable<Planet> GetAllPlanets()
         {
-            throw new NotImplementedException();
+            return dlc.Get8Planets();
+        }
+        public Planet GetPlanetInfo(string pname)
+        {
+            List<Planet> planets = dlc.Get8Planets();
+            foreach (var planet in planets)
+            {
+                if (planet.Name == pname)
+                {
+                    return planet;
+                }
+            }
+            return null;
         }
 
         public PlanetInfo SearchByImage(string imUrl)

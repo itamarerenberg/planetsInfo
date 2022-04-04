@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PlanetInfo.cs" />
+    <Compile Include="Planet.cs" />
     <Compile Include="POD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

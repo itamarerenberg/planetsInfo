@@ -53,6 +53,10 @@
       <Project>{2522E445-E944-4B4C-BF40-5232DE21F8AF}</Project>
       <Name>BE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DL\DL.csproj">
+      <Project>{376AF6C6-40E7-4E1C-9FDC-75859FFDE17E}</Project>
+      <Name>DL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
