@@ -2,10 +2,7 @@
 {
     public class Planet
     {
-        public Planet()
-        {
-        }
-
+        
         public string Name { get; set; }
         public string GeneralInfo { get; set; }
         public string Category { get; set; }
@@ -24,6 +21,11 @@
         public string AxialTilt { get; set; }
         public string AvgSurfaceTemp { get; set; }
         public string ImageUrl { get; set; }
+
+        public Planet()
+        {
+        }
+
         public override string ToString()
         {
             return "Name " + Name + " ImageUrl " + ImageUrl;
