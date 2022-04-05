@@ -13,6 +13,7 @@ namespace BE
         public class Links
         {
             public string next { get; set; }
+            public string prev { get; set; }
             public string self { get; set; }
         }
 
@@ -114,9 +115,7 @@ namespace BE
             public string equinox { get; set; }
             public OrbitClass orbit_class { get; set; }
         }
-
-
-        public class NearEarthObject
+        public class Astroid
         {
             public Links links { get; set; }
             public string id { get; set; }
@@ -133,10 +132,21 @@ namespace BE
             public bool is_sentry_object { get; set; }
         }
 
+        public class Date
+        {
+            public List<Astroid> astroids { get; set; }
+        }
+
+        public class NearEarthObject
+        {
+            public List<Date> dates { get; set; }
+        }
+
+
         public class Root
         {
             public Links links { get; set; }
-            public Page page { get; set; }
+            public int element_count { get; set; }
             public NearEarthObject near_earth_objects { get; set; }
         }
 

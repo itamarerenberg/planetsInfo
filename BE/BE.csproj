@@ -49,6 +49,7 @@
     <Compile Include="Planet.cs" />
     <Compile Include="POD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

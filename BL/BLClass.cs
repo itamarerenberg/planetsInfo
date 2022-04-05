@@ -19,9 +19,10 @@ namespace BL
             dlc = new DLClass();
         }
         //picture of the day by immaga
-        public BE.POD PoD(DateTime? date = null)
+        public BE.POD GetPOD(DateTime? date = null)
         {
-            return dlc.GetPOD((DateTime)date);
+            DateTime dt = (DateTime)(date != null ? date : DateTime.Now);
+            return dlc.GetPOD(dt);
         }
 
         public IEnumerable<Planet> GetAllPlanets()
