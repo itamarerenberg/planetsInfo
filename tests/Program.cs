@@ -10,18 +10,29 @@ namespace tests
 {
     class Program
     {
+        static DLClass dlc = new DLClass();
         static void Main(string[] args)
         {
-            var dlc = new DLClass();
+            TestGetSearchResult();
+            Console.WriteLine("done!");
+            Console.ReadLine();
+        }
+
+        public static void TestGetSearchResult()
+        {
+
+        }
+
+        public static void TestGetNearEarthAstroid()
+        {
             DateTime s = new DateTime(1999, 12, 1);
             DateTime e = new DateTime(2020, 12, 1);
-            var a = dlc.GetNearEarthAstroid(s, e);
-            //foreach (var item in a)
-            //{
-            //    Console.WriteLine(item.ToString());
-            //}
-            //dlc.GetSearchResult("moon");
-            Console.ReadKey();
+            int i = 0;
+            foreach(var a in dlc.GetNearEarthAstroid(s, e, 0.2f, 0.7f, null))
+            {
+                Console.WriteLine(a.ToString());
+                Console.WriteLine(i++);
+            }
         }
     }
 }

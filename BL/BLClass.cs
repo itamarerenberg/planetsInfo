@@ -25,29 +25,30 @@ namespace BL
             return dlc.GetPOD(dt);
         }
 
-        public IEnumerable<Planet> GetAllPlanets()
+        public Planet GetPlanet(string planet_name)
         {
-            return dlc.Get8Planets();
-        }
-        public Planet GetPlanetInfo(string pname)
-        {
-            List<Planet> planets = dlc.Get8Planets();
-            foreach (var planet in planets)
-            {
-                if (planet.Name == pname)
-                {
-                    return planet;
-                }
-            }
-            return null;
+            return dlc.GetPlanet(planet_name);
         }
 
-        public PlanetInfo SearchByImage(string imUrl)
+        //public Planet GetPlanetInfo(string pname)
+        //{
+        //    List<Planet> planets = dlc.Get8Planets();
+        //    foreach (var planet in planets)
+        //    {
+        //        if (planet.Name == pname)
+        //        {
+        //            return planet;
+        //        }
+        //    }
+        //    return null;
+        //}
+
+        public Astroid SearchByImage(string imUrl)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<PlanetInfo> qurey(DateTime from, DateTime until, float diameter=0, bool isDengerous=false)
+        public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float diameter=0, bool isDengerous=false)
         {
             throw new NotImplementedException();
         }

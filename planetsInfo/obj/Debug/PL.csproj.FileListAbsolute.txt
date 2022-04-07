@@ -15,3 +15,4 @@ C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.CoreComp
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.CopyComplete
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.exe
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\planetsInfo.pdb
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csprojAssemblyReference.cache

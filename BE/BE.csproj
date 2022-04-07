@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlanetInfo.cs" />
+    <Compile Include="Astroid.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="POD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

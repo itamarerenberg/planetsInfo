@@ -25,3 +25,8 @@ C:\Users\elchanan\source\repos\planetsInfo\BL\bin\Debug\Newtonsoft.Json.dll
 C:\Users\elchanan\source\repos\planetsInfo\BL\bin\Debug\DL.pdb
 C:\Users\elchanan\source\repos\planetsInfo\BL\bin\Debug\DL.dll.config
 C:\Users\elchanan\source\repos\planetsInfo\BL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\DL.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\DL.pdb
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\DL.dll.config
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\Newtonsoft.Json.xml
