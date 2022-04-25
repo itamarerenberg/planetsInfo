@@ -72,6 +72,20 @@
     <Compile Include="View\SolarSystemPlanets.xaml.cs">
       <DependentUpon>SolarSystemPlanets.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AstroidModel.cs" />
+    <Compile Include="AstroidUC.xaml.cs">
+      <DependentUpon>AstroidUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AstroidViewModel.cs" />
+    <Compile Include="NEOModel.cs" />
+    <Compile Include="NEOUC.xaml.cs">
+      <DependentUpon>NEOUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NEOViewModel.cs" />
+    <Page Include="AstroidUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,6 +98,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="NEOUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PODUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\PlanetInfoUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +120,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PODModel.cs" />
+    <Compile Include="PODUserControl.xaml.cs">
+      <DependentUpon>PODUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PODViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
