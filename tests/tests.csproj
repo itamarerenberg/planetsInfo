@@ -68,10 +68,6 @@
       <Project>{376af6c6-40e7-4e1c-9fdc-75859ffde17e}</Project>
       <Name>DL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\planetsInfo\PL.csproj">
-      <Project>{8f3bedf1-d92c-41ab-a6bf-b12e9f6d83f3}</Project>
-      <Name>PL</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
