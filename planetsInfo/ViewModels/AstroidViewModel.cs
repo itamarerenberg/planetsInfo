@@ -11,7 +11,7 @@ namespace planetsInfo
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private AstroidModel AstroidModel;
+        private BE.Astroid AstroidModel;
 
         public string id
         {
@@ -130,9 +130,9 @@ namespace planetsInfo
             }
         }
 
-        public AstroidViewModel()
+        public AstroidViewModel(BE.Astroid astroid)
         {
-            AstroidModel = new AstroidModel();
+            AstroidModel = astroid;
         }
     }
 }

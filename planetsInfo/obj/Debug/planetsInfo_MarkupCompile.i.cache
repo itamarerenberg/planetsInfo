@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\App.xaml
-6-885221635
+71756366372
 
-21-780952537
+23-784638592
 171529404773
-UserControls\AstroidUC.xaml;View\MainWindow.xaml;UserControls\NEOUC.xaml;UserControls\PODUserControl.xaml;UserControls\PlanetInfoUC.xaml;UserControls\SSPanelUC.xaml;
+UserControls\AstroidPanelUC.xaml;UserControls\AstroidUC.xaml;View\MainWindow.xaml;UserControls\NEOUC.xaml;UserControls\PODUserControl.xaml;UserControls\PlanetInfoUC.xaml;UserControls\SSPanelUC.xaml;
 
 True
 

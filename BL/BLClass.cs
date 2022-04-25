@@ -35,9 +35,9 @@ namespace BL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float diameter=0, bool isDengerous=false)
+        public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float min, float max, bool? isDengerous)
         {
-            return dlc.GetNearEarthAstroid(from, until, 0.2f, 0.7f, true);
+            return dlc.GetNearEarthAstroid(from, until, min, max, isDengerous);
         }
 
         public List<string> GetSSPlanets()

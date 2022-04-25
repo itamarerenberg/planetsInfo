@@ -59,17 +59,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\AstroidPanelUC_M.cs" />
     <Compile Include="Model\PlanetInfo_UC_M.cs" />
     <Compile Include="Model\SSPanelUC_M.cs" />
+    <Compile Include="UserControls\AstroidPanelUC.xaml.cs">
+      <DependentUpon>AstroidPanelUC.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PlanetInfoUC.xaml.cs">
       <DependentUpon>PlanetInfoUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SSPanelUC.xaml.cs">
       <DependentUpon>SSPanelUC.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AstroidPanelUC_VM.cs" />
     <Compile Include="ViewModels\PlanetInfo_UC_VM.cs" />
     <Compile Include="ViewModels\SSPlanetUC_VM.cs" />
-    <Compile Include="Model\AstroidModel.cs" />
     <Compile Include="UserControls\AstroidUC.xaml.cs">
       <DependentUpon>AstroidUC.xaml</DependentUpon>
     </Compile>
@@ -79,6 +83,10 @@
       <DependentUpon>NEOUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\NEOViewModel.cs" />
+    <Page Include="UserControls\AstroidPanelUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AstroidUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

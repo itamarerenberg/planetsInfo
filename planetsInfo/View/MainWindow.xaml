@@ -4,11 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-        xmlns:planetsInfo="clr-namespace:planetsInfo" x:Class="PL.MainWindow"
+        xmlns:planetsInfo="clr-namespace:planetsInfo" xmlns:UserControls="clr-namespace:planetsInfo.UserControls" x:Class="PL.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <planetsInfo:PODUserControl HorizontalAlignment="Left" Height="200" Margin="383,10,0,0" VerticalAlignment="Top" Width="400"/>
-        <planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>
+        <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="200" Margin="383,10,0,0" VerticalAlignment="Top" Width="400"/>
+        <planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>-->
+        <UserControls:AstroidPanelUC HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

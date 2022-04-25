@@ -64,11 +64,12 @@ namespace DL
                     all_neObjects.Add(JAstroidToAstroid(ne_object));
                 }
             }
-            return (from neo in all_neObjects
+            var res = (from neo in all_neObjects
                     where (isDangeruse == null || neo.is_potentially_hazardous_asteroid == isDangeruse)
                     && neo.estimated_diameter_min > minDiameter
                     && neo.estimated_diameter_max < maxDiameter
-                    select neo);
+                    select neo).ToList();
+            return res;
         }
 
         private Astroid JAstroidToAstroid(JToken jastroid)

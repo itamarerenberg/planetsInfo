@@ -1,4 +1,5 @@
-﻿using System;
+﻿using planetsInfo.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,19 +14,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace planetsInfo
+namespace planetsInfo.UserControls
 {
     /// <summary>
-    /// Interaction logic for AstroidUC.xaml
+    /// Interaction logic for AstroidPanelUC.xaml
     /// </summary>
-    public partial class AstroidUC : UserControl
+    public partial class AstroidPanelUC : UserControl
     {
-        public AstroidViewModel AstroidViewModel { get; set; }
-        public AstroidUC()
+        public AstroidPanelUC()
         {
             InitializeComponent();
-            //AstroidViewModel = astroidvm;
-            //this.DataContext = AstroidViewModel;
+            DataContext = new AstroidPanelUC_VM();
         }
     }
 }
