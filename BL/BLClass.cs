@@ -30,19 +30,6 @@ namespace BL
             return dlc.GetPlanet(planet_name);
         }
 
-        //public Planet GetPlanetInfo(string pname)
-        //{
-        //    List<Planet> planets = dlc.Get8Planets();
-        //    foreach (var planet in planets)
-        //    {
-        //        if (planet.Name == pname)
-        //        {
-        //            return planet;
-        //        }
-        //    }
-        //    return null;
-        //}
-
         public Astroid SearchByImage(string imUrl)
         {
             throw new NotImplementedException();
@@ -51,6 +38,11 @@ namespace BL
         public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float diameter=0, bool isDengerous=false)
         {
             throw new NotImplementedException();
+        }
+
+        public List<string> GetSSPlanets()
+        {
+            return dlc.GetSSPlanets();
         }
     }
 }

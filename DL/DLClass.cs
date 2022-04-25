@@ -37,6 +37,11 @@ namespace DL
             return solarSystemInfo.info[planetName];
         }
 
+        public List<string> GetSSPlanets()
+        {
+            return solarSystemInfo.info.Keys.ToList();
+        }
+
         public IEnumerable<Astroid> GetNearEarthAstroid(DateTime startDate, DateTime endDate, float minDiameter = 0, float maxDiameter = float.PositiveInfinity, bool? isDangeruse = null)
         {
             var client = new RestClient("https://api.nasa.gov/neo/rest/v1/feed");

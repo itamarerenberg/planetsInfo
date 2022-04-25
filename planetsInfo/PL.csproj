@@ -59,6 +59,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\PlanetInfo_UC_M.cs" />
+    <Compile Include="Model\SSPanelUC_M.cs" />
+    <Compile Include="UserControls\PlanetInfoUC.xaml.cs">
+      <DependentUpon>PlanetInfoUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SSPanelUC.xaml.cs">
+      <DependentUpon>SSPanelUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\PlanetInfo_UC_VM.cs" />
+    <Compile Include="ViewModels\SSPlanetUC_VM.cs" />
+    <Compile Include="View\SolarSystemPlanets.xaml.cs">
+      <DependentUpon>SolarSystemPlanets.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,6 +84,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="UserControls\PlanetInfoUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SSPanelUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SolarSystemPlanets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -98,6 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{2522e445-e944-4b4c-bf40-5232de21f8af}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{00a47e6d-e619-477a-9b5b-2009d6bed91d}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
