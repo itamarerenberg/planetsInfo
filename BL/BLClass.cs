@@ -50,7 +50,7 @@ namespace BL
 
         public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float diameter=0, bool isDengerous=false)
         {
-            throw new NotImplementedException();
+            return dlc.GetNearEarthAstroid(from, until, 0.2f, 0.7f, true);
         }
     }
 }

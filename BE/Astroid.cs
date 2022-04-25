@@ -22,7 +22,7 @@ namespace BE
 
         public override string ToString()
         {
-            return "id: " + id + " | name: " + name + " | min d: " + estimated_diameter_min + " | max d: " + estimated_diameter_max + " | dengerous: " + is_potentially_hazardous_asteroid;
+            return "id: " + id + " | name: " + name + "| nasa_jpl_url: "+ nasa_jpl_url+ " | min d: " + estimated_diameter_min + " | max d: " + estimated_diameter_max + " | dengerous: " + is_potentially_hazardous_asteroid;
         }
 
     }

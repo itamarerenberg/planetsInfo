@@ -13,7 +13,7 @@ namespace tests
         static DLClass dlc = new DLClass();
         static void Main(string[] args)
         {
-            TestGetSearchResult();
+            TestGetNearEarthAstroid();
             Console.WriteLine("done!");
             Console.ReadLine();
         }

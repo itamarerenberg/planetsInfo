@@ -72,10 +72,14 @@ namespace DL
             Astroid castroid = new Astroid()
             {
                 id = jastroid["id"].ToString(),
+                neo_reference_id = jastroid["neo_reference_id"].ToString(),
                 name = jastroid["name"].ToString(),
+                nasa_jpl_url = jastroid["nasa_jpl_url"].ToString(),
                 estimated_diameter_min = float.Parse(jastroid["estimated_diameter"]["kilometers"]["estimated_diameter_min"].ToString()),
                 estimated_diameter_max = float.Parse(jastroid["estimated_diameter"]["kilometers"]["estimated_diameter_max"].ToString()),
-                is_potentially_hazardous_asteroid = bool.Parse(jastroid["is_potentially_hazardous_asteroid"].ToString())
+                absolute_magnitude_h = float.Parse(jastroid["absolute_magnitude_h"].ToString()),
+                is_potentially_hazardous_asteroid = bool.Parse(jastroid["is_potentially_hazardous_asteroid"].ToString()),
+                is_sentry_object = bool.Parse(jastroid["is_sentry_object"].ToString())
             };
             return castroid;
         }
