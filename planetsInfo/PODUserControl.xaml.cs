@@ -13,18 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PL
+namespace planetsInfo
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PODUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PODUserControl : UserControl
     {
-        public MainWindow()
+        public PODViewModel PODViewModel { get; set; }
+        public PODUserControl()
         {
             InitializeComponent();
+            PODViewModel = new PODViewModel();
+            this.DataContext = PODViewModel;
         }
-
-
     }
 }
