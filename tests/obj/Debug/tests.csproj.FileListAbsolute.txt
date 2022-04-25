@@ -29,13 +29,10 @@ C:\Users\erenb\source\repos\planetsInfo\tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\BE.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\BL.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\DL.dll
-C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\planetsInfo.exe
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\Newtonsoft.Json.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\BE.pdb
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\BL.pdb
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\DL.pdb
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\DL.dll.config
-C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\planetsInfo.pdb
-C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\planetsInfo.exe.config
 C:\Users\elchanan\Source\Repos\planetsInfo\tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\elchanan\source\repos\planetsInfo\tests\obj\Debug\tests.csproj.CopyComplete
