@@ -25,5 +25,17 @@ namespace DL
         {
             return root.Element("NASA_API_KEY").Value;
         }
+        public static string get_IMAGGA_API_key(string userName = "")
+        {
+            return root.Element("IMAGGA_API_KEY").Value;
+        }
+        public static string get_IMAGGA_API_SECRET(string userName = "")
+        {
+            return root.Element("IMAGGA_API_SECRET").Value;
+        }
+        public static string get_IMAGGA_API_AUTH(string userName = "")
+        {
+            return root.Element("IMAGGA_API_AUTH").Value;
+        }
     }
 }

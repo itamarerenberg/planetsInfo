@@ -30,9 +30,9 @@ namespace BL
             return dlc.GetPlanet(planet_name);
         }
 
-        public Astroid SearchByImage(string imUrl)
+        public IEnumerable<BE.Search.Item> SearchPlanet(string search)
         {
-            throw new NotImplementedException();
+            return dlc.GetSearchResult(search);
         }
 
         public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float min, float max, bool? isDengerous)

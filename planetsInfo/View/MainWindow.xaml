@@ -8,8 +8,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="200" Margin="383,10,0,0" VerticalAlignment="Top" Width="400"/>
-        <planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>-->
-        <UserControls:AstroidPanelUC HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top"/>
+        <UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>
+        <!--<UserControls:SSPanelUC HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->
+        <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="450"  VerticalAlignment="Top" Width="800"/>-->
+        <!--<planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>-->
+        <!--<UserControls:AstroidPanelUC HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top"/>-->
     </Grid>
 </Window>

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -10,98 +11,131 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Height="auto" Width="auto" Grid.Column="0">
+        <StackPanel Height="auto" Grid.Column="0">
             <!--Name-->
-            <StackPanel>
-                <Label Name="lName" Content="name: "/>
-                <TextBlock Name="tbName" Text="{Binding Path=Name}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lName" Content="name: "/>
+                    <TextBlock Name="tbName" Text="{Binding Path=Name}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--GeneralInfo-->
-            <StackPanel>
-                <Label Name="lGeneralInfo" Content="general info: "/>
-                <TextBlock Name="tbGeneralInfo" Text="{Binding Path=GeneralInfo}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lGeneralInfo" Content="general info: "/>
+                    <TextBlock Name="tbGeneralInfo" Text="{Binding Path=GeneralInfo}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--Category-->
-            <StackPanel>
-                <Label Name="lCategory" Content="category: "/>
-                <TextBlock Name="tbCategory" Text="{Binding Path=Category}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lCategory" Content="category: "/>
+                    <TextBlock Name="tbCategory" Text="{Binding Path=Category}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--Location-->
-            <StackPanel>
-                <Label Name="lLocation" Content="location: "/>
-                <TextBlock Name="tbLocation" Text="{Binding Path=Location}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lLocation" Content="location: "/>
+                    <TextBlock Name="tbLocation" Text="{Binding Path=Location}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--AvgDistanceFromSun-->
-            <StackPanel>
-                <Label Name="lAvgDistanceFromSun" Content="Avg Distance From Sun: "/>
-                <TextBlock Name="tbAvgDistanceFromSun" Text="{Binding Path=AvgDistanceFromSun}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lAvgDistanceFromSun" Content="Avg Distance From Sun: "/>
+                    <TextBlock Name="tbAvgDistanceFromSun" Text="{Binding Path=AvgDistanceFromSun}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--OrbitalPeriod-->
-            <StackPanel>
-                <Label Name="lOrbitalPeriod" Content="Orbital Period: "/>
-                <TextBlock Name="tbOrbitalPeriod" Text="{Binding Path=OrbitalPeriod}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lOrbitalPeriod" Content="Orbital Period: "/>
+                    <TextBlock Name="tbOrbitalPeriod" Text="{Binding Path=OrbitalPeriod}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--AvgOrbitalSpeed-->
-            <StackPanel>
-                <Label Name="lAvgOrbitalSpeed" Content="Avg Orbital Speed: "/>
-                <TextBlock Name="tbAvgOrbitalSpeed" Text="{Binding Path=AvgOrbitalSpeed}"/>
-            </StackPanel> 
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lAvgOrbitalSpeed" Content="Avg Orbital Speed: "/>
+                    <TextBlock Name="tbAvgOrbitalSpeed" Text="{Binding Path=AvgOrbitalSpeed}"/>
+                </StackPanel>
+            </materialDesign:Card>
             <!--Inclination-->
-            <StackPanel>
-                <Label Name="lInclination" Content="Inclination: "/>
-                <TextBlock Name="tbInclination" Text="{Binding Path=Inclination}"/>
-            </StackPanel> 
-        </StackPanel>
-
-        <StackPanel Height="auto" Width="auto" Grid.Column="1">
-            <!--Satellites-->
-            <StackPanel>
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lInclination" Content="Inclination: "/>
+                    <TextBlock Name="tbInclination" Text="{Binding Path=Inclination}"/>
+                </StackPanel>
+            </materialDesign:Card>
+        
+        <!--Satellites-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lSatellites" Content="Satellites: "/>
                 <TextBlock Name="tbSatellites" Text="{Binding Path=Satellites}"/>
             </StackPanel>
-            <!--Radius-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--Radius-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lRadius" Content="Radius: "/>
                 <TextBlock Name="tbRadius" Text="{Binding Path=Radius}"/>
             </StackPanel>
-            <!--NSurfaceAreaame-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--NSurfaceAreaame-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lSurfaceArea" Content="SurfaceArea: "/>
                 <TextBlock Name="tbSurfaceArea" Text="{Binding Path=SurfaceArea}"/>
             </StackPanel>
-            <!--Mass-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--Mass-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lMass" Content="Mass: "/>
                 <TextBlock Name="tbMass" Text="{Binding Path=Mass}"/>
             </StackPanel>
-            <!--Density-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--Density-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lDensity" Content="Density: "/>
                 <TextBlock Name="tbDensity" Text="{Binding Path=Density}"/>
             </StackPanel>
-            <!--RotationPeriod-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--RotationPeriod-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lRotationPeriod" Content="Rotation Period: "/>
                 <TextBlock Name="tbRotationPeriod" Text="{Binding Path=RotationPeriod}"/>
             </StackPanel>
-            <!--RotationSpeed-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--RotationSpeed-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lRotationSpeed" Content="Rotation Speed: "/>
                 <TextBlock Name="tbRotationSpeed" Text="{Binding Path=RotationSpeed}"/>
             </StackPanel>
-            <!--AxialTilt-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--AxialTilt-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lAxialTilt" Content="AxialTilt: "/>
                 <TextBlock Name="tbAxialTilt" Text="{Binding Path=AxialTilt}"/>
             </StackPanel>
-            <!--AvgSurfaceTemp-->
-            <StackPanel>
+        </materialDesign:Card>
+        <!--AvgSurfaceTemp-->
+        <materialDesign:Card>
+            <StackPanel Orientation="Horizontal">
                 <Label Name="lAvgSurfaceTemp" Content="Avg Surface Temp: "/>
                 <TextBlock Name="tbAvgSurfaceTemp" Text="{Binding Path=AvgSurfaceTemp}"/>
             </StackPanel>
+        </materialDesign:Card>
         </StackPanel>
-        <Image Source="{Binding Path=ImageUrl}" Grid.Column="2" Width="auto" Height="auto"/>
+        <materialDesign:Card Grid.Column="1">
+            <Image Source="{Binding Path=ImageUrl}" Grid.Column="1" Width="auto" Height="auto"/>
+        </materialDesign:Card>
     </Grid>
 </UserControl>

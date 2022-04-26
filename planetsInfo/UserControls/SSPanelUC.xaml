@@ -12,7 +12,11 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <ListView Name="lbPlanets" ItemsSource="{Binding Path=planets}" SelectionMode="Single" SelectedItem="{Binding Path=SelectedItem}">
-            
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
+
+                </Style>
+            </ListView.ItemContainerStyle>
         </ListView>
         <local:PlanetInfoUC DataContext="{Binding SelectedPlanet}" Grid.Column="1"/>
     </Grid>

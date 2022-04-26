@@ -2,15 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -22,21 +20,82 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Stretch"  TextWrapping="Wrap" Text="{Binding id}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="0" Content="id: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="98" Height="26"/>
-        <TextBlock Grid.Row="1" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding neo_reference_id}" VerticalAlignment="Stretch" Grid.Column="1" />
-        <Label Grid.Row="1" Content="neo_reference_id: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBlock Grid.Row="2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding name}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="2" Content="name: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBlock Grid.Row="3" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding nasa_jpl_url}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="3" Content="nasa_jpl_url: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBlock Grid.Row="4" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding absolute_magnitude_h}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="4" Content="absolute_magnitude_h: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBlock Grid.Row="5" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding estimated_diameter_min}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="5" Content="estimated_diameter_min: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <TextBlock Grid.Row="6" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding estimated_diameter_max}" VerticalAlignment="Stretch" Grid.Column="1"/>
-        <Label Grid.Row="6" Content="estimated_diameter_max: " HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <CheckBox Content="is_potentially_hazardous_asteroid" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <CheckBox Content="is_sentry_object" IsChecked="{Binding is_sentry_object}" Grid.Row="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <materialDesign:Card Grid.Row="0" Width="auto">
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap" Text="{Binding id}" Grid.Column="1"/>
+            <Label Content="id: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="1" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding neo_reference_id}" Grid.Column="1" />
+                <Label Content="neo_reference_id: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="2" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding name}" Grid.Column="1"/>
+                <Label Content="name: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="3" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding nasa_jpl_url}" Grid.Column="1"/>
+                <Label Content="nasa_jpl_url: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="4" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding absolute_magnitude_h}" Grid.Column="1"/>
+                <Label Content="absolute_magnitude_h: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="5" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_min}" Grid.Column="1"/>
+                <Label Content="estimated_diameter_min: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="6" Width="auto">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_max}" Grid.Column="1"/>
+                <Label Content="estimated_diameter_max: "/>
+            </Grid>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="7" Width="auto">
+
+            <CheckBox Content="is_potentially_hazardous_asteroid" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7"/>
+        </materialDesign:Card>
+        <materialDesign:Card Grid.Row="8" Width="auto">
+            <CheckBox Content="is_sentry_object" IsChecked="{Binding is_sentry_object}" Grid.Row="8"/>
+        </materialDesign:Card>
     </Grid>
 </UserControl>

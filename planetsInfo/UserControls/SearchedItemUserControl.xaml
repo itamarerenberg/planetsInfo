@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="planetsInfo.UserControls.SearchedItemUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:planetsInfo.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+    <Grid Height="300" Width="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Height="auto" Grid.Column="0">
+            <!--title-->
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="ltitle" Content="title: "/>
+                    <TextBlock Name="tbtitle" Text="{Binding Path=title}"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <!--nasa_id-->
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="lnasa_id" Content="general info: "/>
+                    <TextBlock Name="tbnasa_id" Text="{Binding Path=nasa_id}"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <!--date_created-->
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="ldate_created" Content="date_created: "/>
+                    <TextBlock Name="tbdate_created" Text="{Binding Path=date_created}"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+            <!--description-->
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="ldescription" Content="description: "/>
+                    <TextBlock Name="tbdescription" Text="{Binding Path=description}"/>
+                </StackPanel>
+            </materialDesign:Card>
+            <!--location-->
+            <materialDesign:Card>
+                <StackPanel Orientation="Horizontal">
+                    <Label Name="llocation" Content="location: "/>
+                    <TextBlock Name="tblocation" Text="{Binding Path=location}"/>
+                </StackPanel>
+            </materialDesign:Card>
+
+
+
+
+            <materialDesign:Card>
+                <StackPanel>
+                    <Image Source="{Binding Path=imgUri}" Width="auto" Height="auto"/>
+                </StackPanel>
+            </materialDesign:Card>
+        </StackPanel>
+    </Grid>
+</UserControl>

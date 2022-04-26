@@ -13,7 +13,10 @@ namespace DL
 {
     public class DLClass
     {
-        string API_KEY = DLConfig.get_nasa_API_key();
+        string NASA_API_KEY = DLConfig.get_nasa_API_key();
+        string IMAGGA_API_KEY = DLConfig.get_IMAGGA_API_key();
+        string IMAGGA_API_SECRET = DLConfig.get_IMAGGA_API_SECRET();
+        string IMAGGA_API_AUTH = DLConfig.get_IMAGGA_API_AUTH();
 
         public POD GetPOD(DateTime date)
         {
@@ -25,7 +28,7 @@ namespace DL
             client.Timeout = -1;
 
             var request = new RestRequest(Method.GET);
-            request.AddParameter("api_key", API_KEY);
+            request.AddParameter("api_key", NASA_API_KEY);
             request.AddParameter("date", date.ToString("yyyy-MM-dd"));
 
             IRestResponse response = client.Execute(request);
@@ -48,7 +51,7 @@ namespace DL
             client.Timeout = -1;
 
             var request = new RestRequest(Method.GET);
-            request.AddParameter("api_key", API_KEY);
+            request.AddParameter("api_key", NASA_API_KEY);
             request.AddParameter("start_date", startDate.ToString("yyyy-MM-dd"));
             //request.AddParameter("end_date", endDate.ToString("yyyy-MM-dd"));
 
@@ -89,7 +92,7 @@ namespace DL
             return castroid;
         }
 
-        public BE.Search.Root GetSearchResult(string search)
+        public IEnumerable<BE.Search.Item> GetSearchResult(string search)
         {
             var client = new RestClient("https://images-api.nasa.gov/search");
             client.Timeout = -1;
@@ -98,8 +101,46 @@ namespace DL
             request.AddParameter("media_type", "image");
             IRestResponse response = client.Execute(request);
             var searchResult = JsonConvert.DeserializeObject<Search.Root>(response.Content);
-            return searchResult;
+            List<Search.Item> result = ItemsByImagga(search, ref client, ref request, ref response, searchResult);
+            return result;
 
+        }
+
+        private List<Search.Item> ItemsByImagga(string search, ref RestClient client, ref RestRequest request, ref IRestResponse response, Search.Root searchResult)
+        {
+            int i = 0;
+            List<Search.Item> result = new List<Search.Item>();
+            foreach (var item in searchResult.collection.items)
+            {
+                var imagga = item.links.First().href;
+                string apiKey = IMAGGA_API_KEY;
+                string apiSecret = IMAGGA_API_SECRET;
+
+                string basicAuthValue = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}:{1}", apiKey, apiSecret)));
+
+                client = new RestClient("https://api.imagga.com/v2/tags");
+                client.Timeout = -1;
+
+                request = new RestRequest(Method.GET);
+                request.AddParameter("image_url", imagga);
+                request.AddHeader("Authorization", String.Format("Basic {0}", basicAuthValue));
+
+                response = client.Execute(request);
+                var res = JsonConvert.DeserializeObject<ImaggaTags.Root>(response.Content);
+                foreach (var tag in res.result.tags)
+                {
+                    if (tag.tag.en == search && tag.confidence == 100)
+                    {
+                        result.Add(item);
+                    }
+                }
+                if (i++ == 50)
+                {
+                    break;
+                }
+            }
+
+            return result;
         }
     }
 }

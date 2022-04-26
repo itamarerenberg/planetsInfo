@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Astroid.cs" />
+    <Compile Include="ImaggaTags.cs" />
     <Compile Include="Planet.cs" />
     <Compile Include="POD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

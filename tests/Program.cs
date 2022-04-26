@@ -13,14 +13,14 @@ namespace tests
         static DLClass dlc = new DLClass();
         static void Main(string[] args)
         {
-            TestGetNearEarthAstroid();
+            TestGetSearchResult();
             Console.WriteLine("done!");
             Console.ReadLine();
         }
 
         public static void TestGetSearchResult()
         {
-
+            dlc.GetSearchResult("moon");
         }
 
         public static void TestGetNearEarthAstroid()
