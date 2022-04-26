@@ -6,10 +6,29 @@
         xmlns:local="clr-namespace:PL"
         xmlns:planetsInfo="clr-namespace:planetsInfo" xmlns:UserControls="clr-namespace:planetsInfo.UserControls" x:Class="PL.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+    <!--<Window.Background>
+        <ImageBrush ImageSource="C:\Users\erenb\source\repos\planetsInfo\thems\backgrownd1.jpg"/>
+    </Window.Background>-->
+    
     <Grid>
-        <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="200" Margin="383,10,0,0" VerticalAlignment="Top" Width="400"/>
-        <planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>-->
-        <UserControls:AstroidPanelUC HorizontalAlignment="Left" Margin="237,10,0,0" VerticalAlignment="Top"/>
+        <TabControl Name="mainTab" Style="{StaticResource MaterialDesignTabControl}">
+            <TabItem>
+                <TabItem.Header>
+                    <Canvas Width="auto" Height="auto" Background="Aqua"/>
+                </TabItem.Header>
+                <UserControls:SSPanelUC/>
+            </TabItem>
+            <TabItem>
+                <UserControls:AstroidPanelUC/>
+            </TabItem>
+            <TabItem>
+                <planetsInfo:PODUserControl/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

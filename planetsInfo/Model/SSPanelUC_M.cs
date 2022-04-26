@@ -14,7 +14,11 @@ namespace planetsInfo.Model
 
         public SSPanelUC_M()
         {
-            source = new BL.BLClass();
+            source = BL.BLClass.Instance;
+        }
+
+        public void LoadData()
+        {
             planets = new ObservableCollection<string>(source.GetSSPlanets());
         }
     }

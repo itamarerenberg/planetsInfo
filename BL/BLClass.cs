@@ -13,8 +13,18 @@ namespace BL
     /// </summary>
     public class BLClass
     {
+        static BLClass instance;
+        public static BLClass Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new BLClass();
+                return instance;
+            }
+        }
         DLClass dlc;
-        public BLClass()
+        private BLClass()
         {
             dlc = new DLClass();
         }
@@ -35,7 +45,7 @@ namespace BL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Astroid> qurey(DateTime from, DateTime until, float min, float max, bool? isDengerous)
+        public IEnumerable<Astroid> GetNearEarthAstroid(DateTime from, DateTime until, float min, float max, bool? isDengerous)
         {
             return dlc.GetNearEarthAstroid(from, until, min, max, isDengerous);
         }

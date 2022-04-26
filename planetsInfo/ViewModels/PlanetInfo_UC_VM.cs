@@ -258,11 +258,15 @@ namespace planetsInfo.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        ICommand LoadData { get; }
-
         public PlanetInfo_UC_VM(string planetName)
         {
-            Model = new PlanetInfo_UC_M(planetName);
+            Model = new PlanetInfo_UC_M();
+            Task loader = Task.Factory.StartNew(()=> Model.LoadData(planetName));
+            loader.ContinueWith((t) =>
+            {
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(""));//all properties has changed
+            });
         }
     }
 }

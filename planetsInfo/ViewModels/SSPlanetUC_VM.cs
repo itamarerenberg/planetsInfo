@@ -54,6 +54,12 @@ namespace planetsInfo.ViewModel
         public SSPlanetUC_VM()
         {
             model = new SSPanelUC_M();
+            Task loader = Task.Factory.StartNew(() => model.LoadData());
+            loader.ContinueWith((t) =>
+            {
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(""));//all properties has changed
+            });
         }
     }
 }
