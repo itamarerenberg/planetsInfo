@@ -47,9 +47,17 @@ namespace planetsInfo.ViewModels
             }
         }
 
-        public SearchResultPanelViewModel()
+        public SearchResultPanelViewModel(string search = "moon")
         {
-            model = new SearchResultPanelModel("moon");
+            model = new SearchResultPanelModel();
+            Task loader = Task.Factory.StartNew(() => model.LoadData(search));
+            loader.ContinueWith((t) =>
+            {
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs(""));
+                }
+            });
         }
     }
 }

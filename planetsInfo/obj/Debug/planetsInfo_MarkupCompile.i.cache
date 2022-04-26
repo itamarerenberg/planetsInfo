@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\
 planetsInfo
 none
 false
 DEBUG;TRACE
-C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\App.xaml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\App.xaml
 91531489405
 
 29-1872128224
-24-1263645686
+24245414698
 UserControls\AstroidPanelUC.xaml;UserControls\AstroidUC.xaml;UserControls\SearchedItemUserControl.xaml;UserControls\SearchPanelUserControl.xaml;View\MainWindow.xaml;UserControls\NEOUC.xaml;UserControls\PODUserControl.xaml;UserControls\PlanetInfoUC.xaml;UserControls\SSPanelUC.xaml;
 
 True

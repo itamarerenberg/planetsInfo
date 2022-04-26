@@ -29,8 +29,11 @@
             <TabItem>
                 <planetsInfo:PODUserControl/>
             </TabItem>
+            <TabItem>
+                <UserControls:SearchPanelUserControl/>
+            </TabItem>
         </TabControl>
-        <UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>
+        <!--<UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->
         <!--<UserControls:SSPanelUC HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->
         <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="450"  VerticalAlignment="Top" Width="800"/>-->
         <!--<planetsInfo:AstroidUC HorizontalAlignment="Left" Height="282" Margin="10,10,0,0" VerticalAlignment="Top" Width="364"/>-->

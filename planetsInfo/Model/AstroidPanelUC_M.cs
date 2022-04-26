@@ -12,7 +12,6 @@ namespace planetsInfo.Model
     class AstroidPanelUC_M
     {
         BL.BLClass source;
-        public Task<List<BE.Astroid>> astroidsLoder;
         private ObservableCollection<BE.Astroid> astroids;
 
         public ObservableCollection<BE.Astroid> Astroids

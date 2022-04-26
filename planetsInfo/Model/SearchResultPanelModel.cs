@@ -9,12 +9,25 @@ namespace planetsInfo.Model
 {
     class SearchResultPanelModel
     {
-        public ObservableCollection<BE.Search.Item> Items;
-        public BL.BLClass BLClass;
-        public SearchResultPanelModel(string search)
+        ObservableCollection<BE.Search.Item> items;
+        public ObservableCollection<BE.Search.Item> Items
         {
-            BLClass = new BL.BLClass();
-            Items = new ObservableCollection<BE.Search.Item>(BLClass.SearchPlanet(search));
+            get
+            {
+                if (items == null)
+                    items = new ObservableCollection<BE.Search.Item>();
+                return items;
+            }
+        }
+        public BL.BLClass BLClass;
+        public SearchResultPanelModel()
+        {
+            BLClass = BL.BLClass.Instance;
+        }
+
+        public void LoadData(string search)
+        {
+            items = new ObservableCollection<BE.Search.Item>(BLClass.SearchPlanet(search));
         }
     }
 }

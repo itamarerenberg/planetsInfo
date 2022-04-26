@@ -88,3 +88,14 @@ C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\Se
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.g.cs
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.g.cs
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignColors.dll
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\ShowMeTheXAML.dll
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\App.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.baml
