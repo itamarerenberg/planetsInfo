@@ -35,9 +35,13 @@ namespace planetsInfo.Model
         public string AvgSurfaceTemp { get => data.AvgSurfaceTemp; set => data.AvgSurfaceTemp = value; }
         public string ImageUrl { get => data.ImageUrl; set => data.ImageUrl = value; }
 
-        public PlanetInfo_UC_M(string planet_name)
+        public PlanetInfo_UC_M()
         {
-            source = new BL.BLClass();
+            source = BL.BLClass.Instance;
+        }
+
+        public void LoadData(string planet_name)
+        {
             data = source.GetPlanet(planet_name);
         }
     }

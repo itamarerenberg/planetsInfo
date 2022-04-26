@@ -11,11 +11,11 @@ namespace planetsInfo
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private PODModel PODModel;
+        private PODModel model;
         public string ImgUri {
-            get { return PODModel.ImgUri; }
+            get { return model.ImgUri; }
             set { 
-                PODModel.ImgUri = value;
+                model.ImgUri = value;
                 if (PropertyChanged != null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("ImgUri"));
@@ -24,10 +24,10 @@ namespace planetsInfo
         }
         public string Description
         {
-            get { return PODModel.Description; }
+            get { return model.Description; }
             set
             {
-                PODModel.Description = value;
+                model.Description = value;
                 if (PropertyChanged != null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("Description"));
@@ -36,10 +36,10 @@ namespace planetsInfo
         }
         public string Date
         {
-            get { return PODModel.Date; }
+            get { return model.Date; }
             set
             {
-                PODModel.Date = value;
+                model.Date = value;
                 if (PropertyChanged != null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("Date"));
@@ -48,10 +48,10 @@ namespace planetsInfo
         }
         public string Title
         {
-            get { return PODModel.Title; }
+            get { return model.Title; }
             set
             {
-                PODModel.Title = value;
+                model.Title = value;
                 if (PropertyChanged != null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("Title"));
@@ -74,7 +74,13 @@ namespace planetsInfo
         //}
         public PODViewModel()
         {
-            PODModel = new PODModel();
+            model = new PODModel();
+            Task loader = Task.Factory.StartNew(() => model.LoadData());
+            loader.ContinueWith((t) =>
+            {
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(""));//all properties has changed
+            });
         }
     }
 }

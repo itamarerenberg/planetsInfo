@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace planetsInfo.Model
@@ -10,12 +12,31 @@ namespace planetsInfo.Model
     class AstroidPanelUC_M
     {
         BL.BLClass source;
-        public ObservableCollection<BE.Astroid> Astroids;
+        public Task<List<BE.Astroid>> astroidsLoder;
+        private ObservableCollection<BE.Astroid> astroids;
 
-        public AstroidPanelUC_M(DateTime from, DateTime until, float min, float max, bool? isDengerous)
+        public ObservableCollection<BE.Astroid> Astroids
         {
-            source = new BL.BLClass();
-            Astroids = new ObservableCollection<BE.Astroid>(source.qurey(from, until, min, max, isDengerous));
+            get
+            {
+                if (astroids == null)
+                    astroids = new ObservableCollection<BE.Astroid>();
+                return astroids;
+            }
+            set
+            {
+                astroids = value;
+            }
+        }
+
+        public AstroidPanelUC_M()
+        {
+            source = BL.BLClass.Instance;
+        }
+
+        public void LoadData(DateTime from, DateTime until, float min, float max, bool? isDengerous)
+        {
+            astroids = new ObservableCollection<BE.Astroid>(source.GetNearEarthAstroid(from, until, min, max, isDengerous));
         }
     }
 }

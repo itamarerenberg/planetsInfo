@@ -20,6 +20,7 @@ namespace planetsInfo.ViewModels
         }
 
         string selectedAstroidName;
+
         public string SelectedAstroidName 
         {
             get => selectedAstroidName;
@@ -47,7 +48,13 @@ namespace planetsInfo.ViewModels
 
         public AstroidPanelUC_VM()
         {
-            model = new AstroidPanelUC_M(new DateTime(1999,12,1), new DateTime(1999, 12, 1), 0f, 2.7f, null);
+            model = new AstroidPanelUC_M();
+            Task loader = Task.Factory.StartNew(() => model.LoadData(new DateTime(1999, 12, 1), new DateTime(1999, 12, 1), 0f, 2.7f, null));
+            loader.ContinueWith((t) =>
+            {
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(""));//all properties has changed
+            });
         }
 
     }

@@ -13,23 +13,20 @@ namespace planetsInfo
     class PODModel
     {
         public BE.POD POD = new POD();
-        public BL.BLClass BLClass = new BL.BLClass();
-        public string ImgUri { get; set; }
-        public string Description { get; set; }
-        public string Date { get; set; }
-        public string Title { get; set; }
+        public BL.BLClass source;
+        public string ImgUri { get => POD.hdurl; set => POD.hdurl = value; }
+        public string Description { get => POD.explanation; set => POD.explanation = value; }
+        public string Date { get => POD.date; set => POD.date = value; }
+        public string Title { get => POD.title; set => POD.title = value; }
         //public DateTime DateTime { get; set; } = DateTime.Now;
         public PODModel()
         {
-            POD = BLClass.GetPOD(DateTime.Now);
-            ImgUri = POD.hdurl;
-            Description = POD.explanation;
-            Date = POD.date;
-            Title = POD.title;
-            //DateTime = DateTime.ParseExact(POD.date, "yyyy-MM-dd",
-            //    CultureInfo.InvariantCulture);
-
+            source = BL.BLClass.Instance;
         }
         
+        public void LoadData(DateTime? date = null)
+        {
+            POD = source.GetPOD(date);
+        }
     }
 }

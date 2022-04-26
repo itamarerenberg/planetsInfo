@@ -10,7 +10,7 @@ namespace planetsInfo
     class NEOModel
     {
         public ObservableCollection<BE.Astroid> astroids = new ObservableCollection<BE.Astroid>();
-        BL.BLClass BLClass = new BL.BLClass();
+        BL.BLClass BLClass = BL.BLClass.Instance;
         public NEOModel()
         {
             //astroids = BLClass.qurey();

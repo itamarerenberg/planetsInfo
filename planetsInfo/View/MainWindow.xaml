@@ -6,8 +6,30 @@
         xmlns:local="clr-namespace:PL"
         xmlns:planetsInfo="clr-namespace:planetsInfo" xmlns:UserControls="clr-namespace:planetsInfo.UserControls" x:Class="PL.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}">
+    <!--<Window.Background>
+        <ImageBrush ImageSource="C:\Users\erenb\source\repos\planetsInfo\thems\backgrownd1.jpg"/>
+    </Window.Background>-->
+    
     <Grid>
+        <TabControl Name="mainTab" Style="{StaticResource MaterialDesignTabControl}">
+            <TabItem>
+                <TabItem.Header>
+                    <Canvas Width="auto" Height="auto" Background="Aqua"/>
+                </TabItem.Header>
+                <UserControls:SSPanelUC/>
+            </TabItem>
+            <TabItem>
+                <UserControls:AstroidPanelUC/>
+            </TabItem>
+            <TabItem>
+                <planetsInfo:PODUserControl/>
+            </TabItem>
+        </TabControl>
         <UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>
         <!--<UserControls:SSPanelUC HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->
         <!--<planetsInfo:PODUserControl HorizontalAlignment="Left" Height="450"  VerticalAlignment="Top" Width="800"/>-->
