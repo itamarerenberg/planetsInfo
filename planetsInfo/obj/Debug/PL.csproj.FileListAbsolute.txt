@@ -101,3 +101,7 @@ C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\Searc
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\Dictionary.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.g.cs
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\PL.csproj.CopyComplete

@@ -114,6 +114,10 @@
     <Compile Include="UserControls\NEOUC.xaml.cs">
       <DependentUpon>NEOUC.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControls\AstroidPanelUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
