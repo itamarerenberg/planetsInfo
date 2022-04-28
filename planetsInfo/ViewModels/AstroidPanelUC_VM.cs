@@ -63,9 +63,8 @@ namespace planetsInfo.ViewModels
         {
             get
             {
-
                 if (selectedAstroidName == null)
-                    return null;
+                    return new AstroidViewModel();
                 return new AstroidViewModel(model.Astroids.First(a => a.name == selectedAstroidName));
             }
            

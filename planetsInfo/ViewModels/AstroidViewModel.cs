@@ -15,7 +15,12 @@ namespace planetsInfo
 
         public string id
         {
-            get { return AstroidModel.id; }
+            get
+            {
+                if (!HasContent)
+                    return null;
+                return AstroidModel.id;
+            }
             set
             {
                 AstroidModel.id = value;
@@ -28,7 +33,12 @@ namespace planetsInfo
 
         public string neo_reference_id
         {
-            get { return AstroidModel.neo_reference_id; }
+            get
+            {
+                if (!HasContent)
+                    return null;
+                return AstroidModel.neo_reference_id;
+            }
             set
             {
                 AstroidModel.neo_reference_id = value;
@@ -41,7 +51,12 @@ namespace planetsInfo
 
         public string name
         {
-            get { return AstroidModel.name; }
+            get
+            {
+                if (!HasContent)
+                    return null;
+                return AstroidModel.name;
+            }
             set
             {
                 AstroidModel.name = value;
@@ -54,7 +69,12 @@ namespace planetsInfo
 
         public string nasa_jpl_url
         {
-            get { return AstroidModel.nasa_jpl_url; }
+            get
+            {
+                if (!HasContent)
+                    return null;
+                return AstroidModel.nasa_jpl_url;
+            }
             set
             {
                 AstroidModel.nasa_jpl_url = value;
@@ -67,7 +87,12 @@ namespace planetsInfo
 
         public double absolute_magnitude_h
         {
-            get { return AstroidModel.absolute_magnitude_h; }
+            get
+            {
+                if (!HasContent)
+                    return 0;
+                return AstroidModel.absolute_magnitude_h;
+            }
             set
             {
                 AstroidModel.absolute_magnitude_h = value;
@@ -80,7 +105,12 @@ namespace planetsInfo
 
         public double estimated_diameter_min
         {
-            get { return AstroidModel.estimated_diameter_min; }
+            get
+            {
+                if (!HasContent)
+                    return 0;
+                return AstroidModel.estimated_diameter_min;
+            }
             set
             {
                 AstroidModel.estimated_diameter_min = value;
@@ -93,7 +123,12 @@ namespace planetsInfo
 
         public double estimated_diameter_max
         {
-            get { return AstroidModel.estimated_diameter_max; }
+            get
+            {
+                if (!HasContent)
+                    return 0;
+                return AstroidModel.estimated_diameter_max;
+            }
             set
             {
                 AstroidModel.estimated_diameter_max = value;
@@ -106,7 +141,12 @@ namespace planetsInfo
 
         public bool is_potentially_hazardous_asteroid
         {
-            get { return AstroidModel.is_potentially_hazardous_asteroid; }
+            get
+            {
+                if (!HasContent)
+                    return false;
+                return AstroidModel.is_potentially_hazardous_asteroid;
+            }
             set
             {
                 AstroidModel.is_potentially_hazardous_asteroid = value;
@@ -119,7 +159,12 @@ namespace planetsInfo
 
         public bool is_sentry_object
         {
-            get { return AstroidModel.is_sentry_object; }
+            get
+            {
+                if (!HasContent)
+                    return false;
+                return AstroidModel.is_sentry_object;
+            }
             set
             {
                 AstroidModel.is_sentry_object = value;
@@ -130,8 +175,16 @@ namespace planetsInfo
             }
         }
 
-        public AstroidViewModel(BE.Astroid astroid)
+        public bool HasContent { get; set; }
+
+        public AstroidViewModel(BE.Astroid astroid = null)
         {
+            if (astroid == null)
+            {
+                HasContent = false;
+                return;
+            }
+            HasContent = true;
             AstroidModel = astroid;
         }
     }

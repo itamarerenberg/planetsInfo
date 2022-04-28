@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
-    <Border Style="{StaticResource border}" Background="Cyan">
+    <Border Style="{StaticResource border}" Background="Cyan" Visibility="{Binding HasContent, Converter={StaticResource BooleanToVisibilityConverter}}">
         <StackPanel>
 
             <StackPanel>
