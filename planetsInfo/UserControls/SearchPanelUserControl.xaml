@@ -11,9 +11,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <materialDesign:Card>
-            <ListView x:Name="lvItems" Width="auto" ItemsSource="{Binding ObjectId}" SelectionMode="Single" SelectedItem="{Binding SelectedItemId}">
+            <ListView x:Name="lvItems" Visibility="Hidden" Width="auto" ItemsSource="{Binding ObjectId}" SelectionMode="Single" SelectedItem="{Binding SelectedItemId}">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
 
@@ -21,7 +22,12 @@
                 </ListView.ItemContainerStyle>
             </ListView>
         </materialDesign:Card>
-        <local:SearchedItemUserControl DataContext="{Binding SelectedItem}" HorizontalAlignment="Left"  Width="auto" Grid.Column="1"/>
+        <local:SearchedItemUserControl x:Name="ucSearchItem" Visibility="Hidden" DataContext="{Binding SelectedItem}" HorizontalAlignment="Left"  Width="auto" Grid.Column="1"/>
+        <StackPanel Grid.Column="2">
+            <TextBox Name="tbSearch" Grid.Column="2"/>
+
+            <Button Content="search" Grid.Column="2" Click="Button_Click"/>
+        </StackPanel>
         <!--<planetsInfo:AstroidUC Grid.Column="1" HorizontalAlignment="Left" DataContext="{Binding Path=SelectedAstroid}" Width="auto"/>-->
     </Grid>
 </UserControl>

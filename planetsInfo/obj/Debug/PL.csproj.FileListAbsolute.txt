@@ -74,12 +74,10 @@ C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignT
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidPanelUC.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidUC.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\View\MainWindow.g.cs
-C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\NEOUC.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PODUserControl.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidPanelUC.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidUC.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\View\MainWindow.baml
-C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\NEOUC.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PODUserControl.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\App.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.g.cs

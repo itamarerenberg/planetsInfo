@@ -26,5 +26,12 @@ namespace planetsInfo.UserControls
             InitializeComponent();
             DataContext = new SearchResultPanelViewModel();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ucSearchItem.Visibility = Visibility.Visible;
+            lvItems.Visibility = Visibility.Visible;
+            DataContext = new SearchResultPanelViewModel(tbSearch.Text.ToString());
+        }
     }
 }
