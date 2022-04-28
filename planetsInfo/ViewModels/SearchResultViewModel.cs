@@ -13,9 +13,17 @@ namespace planetsInfo.ViewModels
 
         private BE.Search.Item ItemModel;
 
+
         public string title
         {
-            get { return ItemModel.data.First().title; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return null;
+                }
+                return ItemModel.data.First().title;
+            }
             set
             {
                 ItemModel.data.First().title = value;
@@ -28,7 +36,14 @@ namespace planetsInfo.ViewModels
 
         public string nasa_id
         {
-            get { return ItemModel.data.First().nasa_id; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return null;
+                }
+                return ItemModel.data.First().nasa_id;
+            }
             set
             {
                 ItemModel.data.First().nasa_id = value;
@@ -41,7 +56,14 @@ namespace planetsInfo.ViewModels
 
         public DateTime date_created
         {
-            get { return ItemModel.data.First().date_created; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return DateTime.Now;
+                }
+                return ItemModel.data.First().date_created;
+            }
             set
             {
                 ItemModel.data.First().date_created = value;
@@ -54,7 +76,14 @@ namespace planetsInfo.ViewModels
 
         public string description
         {
-            get { return ItemModel.data.First().description; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return null;
+                }
+                return ItemModel.data.First().description;
+            }
             set
             {
                 ItemModel.data.First().description = value;
@@ -67,7 +96,14 @@ namespace planetsInfo.ViewModels
 
         public string location
         {
-            get { return ItemModel.data.First().location; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return null;
+                }
+                return ItemModel.data.First().location;
+            }
             set
             {
                 ItemModel.data.First().location = value;
@@ -80,7 +116,14 @@ namespace planetsInfo.ViewModels
 
         public string imgUri
         {
-            get { return ItemModel.links.First().href; }
+            get
+            {
+                if (!HasContent)
+                {
+                    return null;
+                }
+                return ItemModel.links.First().href;
+            }
             set
             {
                 ItemModel.links.First().href = value;
@@ -90,9 +133,15 @@ namespace planetsInfo.ViewModels
                 }
             }
         }
-
-        public SearchResultViewModel(BE.Search.Item item)
+        public bool HasContent { get; set; }
+        public SearchResultViewModel(BE.Search.Item item = null)
         {
+            if (item == null)
+            {
+                HasContent = false;
+                return;
+            }
+            HasContent = true;
             ItemModel = item;
         }
     }

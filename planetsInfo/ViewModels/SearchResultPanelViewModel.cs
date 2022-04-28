@@ -41,7 +41,7 @@ namespace planetsInfo.ViewModels
             {
                 if (selectedItemId == null)
                 {
-                    return null;
+                    return new SearchResultViewModel();
                 }
                 return new SearchResultViewModel(model.Items.First(I => I.data.First().nasa_id == selectedItemId));
             }
