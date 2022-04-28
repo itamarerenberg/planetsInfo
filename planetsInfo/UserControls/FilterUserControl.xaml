@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:converters="clr-namespace:planetsInfo.converters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
@@ -16,8 +18,8 @@
     <StackPanel>
 
         <StackPanel>
-            <DatePicker Name="dpFrom"/>
-            <DatePicker Name="dpUntil"/>
+            <DatePicker Name="dpFrom" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <DatePicker Name="dpUntil" SelectedDate="{x:Static sys:DateTime.Now}"/>
         </StackPanel>
         <StackPanel>
             <TextBox Name="tbMinDiameter" Text="0"/>

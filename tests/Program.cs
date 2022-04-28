@@ -13,7 +13,7 @@ namespace tests
         static DLClass dlc = new DLClass();
         static void Main(string[] args)
         {
-            TestGetSearchResult();
+            //dlc.Search("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlR5Fqi_JxLViz9QhPKQxSEhlhah-oyaPvYA&usqp=CAU");
             Console.WriteLine("done!");
             Console.ReadLine();
         }

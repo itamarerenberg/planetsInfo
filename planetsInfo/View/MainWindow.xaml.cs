@@ -25,9 +25,6 @@ namespace PL
             InitializeComponent();
         }
 
-        private void SSPanelUC_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+  
     }
 }

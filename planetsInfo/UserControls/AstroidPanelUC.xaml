@@ -8,11 +8,13 @@
              xmlns:planetsInfo="clr-namespace:planetsInfo" 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Dictionary.xaml"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="800"/>
         </Grid.ColumnDefinitions>
         <materialDesign:Card>
             <StackPanel>
@@ -27,6 +29,6 @@
                 </ListView>
             </StackPanel>
         </materialDesign:Card>
-        <planetsInfo:AstroidUC Grid.Column="1" HorizontalAlignment="Left" DataContext="{Binding Path=SelectedAstroid}" Width="auto"/>
+        <planetsInfo:AstroidUC Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" DataContext="{Binding Path=SelectedAstroid}" Width="auto" Height="350"/>
     </Grid>
 </UserControl>
