@@ -16,21 +16,12 @@
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Border Background="Black" Style="{StaticResource border}">
-            <!--<Border.Effect>
-                <DropShadowEffect ShadowDepth="3"/>
-            </Border.Effect>-->
             <ListView Name="lbPlanets" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemsSource="{Binding Path=planets}" SelectionMode="Single" SelectedItem="{Binding Path=SelectedItem}">
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Background="{x:Null}" Orientation="Vertical"></StackPanel>
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Border Background="{x:Null}" BorderThickness="0" Width="auto" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Grid.Column="2" Style="{StaticResource border}">
-                            <!--<Border.Effect>
-                                <DropShadowEffect ShadowDepth="3"/>
-                            </Border.Effect>-->
+                        <Border Background="{x:Null}" BorderThickness="0" Width="auto" Height="auto" 
+                                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" 
+                                Grid.Column="2" Style="{StaticResource border}">
                             <ContentPresenter>
                                 <ContentPresenter.ContentTemplate>
                                     <DataTemplate>
@@ -43,32 +34,12 @@
                                         </materialDesign:Card>
                                     </DataTemplate>
                                 </ContentPresenter.ContentTemplate>
-
                             </ContentPresenter>
-
-                            <!--<Border.Background>
-                <ImageBrush ImageSource="{Binding ImageUrl}"/>
-            </Border.Background>-->
                         </Border>
-                        <!--<StackPanel Orientation="Vertical">
-                        <TextBlock Text="{Binding planetsName}">
-                            <TextBlock.Background>
-                                <ImageBrush ImageSource="{Binding planetsImage}"/>
-                            </TextBlock.Background>
-                        </TextBlock>
-                        -->
-                        <!--<Image Source="{Binding planetsImage}" Width="auto" Height="auto"/>-->
-                        <!--
-                    </StackPanel>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
-                <!--<ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
-
-                </Style>
-            </ListView.ItemContainerStyle>-->
             </ListView>
         </Border>
-        <local:PlanetInfoUC DataContext="{Binding SelectedPlanet}" Grid.Column="1"/>
+        <local:PlanetInfoUC x:Name="ucPlanetInfo" DataContext="{Binding SelectedPlanet}"  Grid.Column="1"/>
     </Grid>
 </UserControl>

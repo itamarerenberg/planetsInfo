@@ -35,7 +35,7 @@ namespace planetsInfo.ViewModel
             get
             {
                 if (selectedItem == null)
-                    return null;
+                    return new PlanetInfo_UC_VM();
                 return new PlanetInfo_UC_VM(SelectedItem.planetsName);
             }
         }
@@ -51,8 +51,6 @@ namespace planetsInfo.ViewModel
 
             }
         }
-
-        
 
         public SSPlanetUC_VM()
         {

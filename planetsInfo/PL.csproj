@@ -79,6 +79,7 @@
     </ApplicationDefinition>
     <Compile Include="commands\FilterCommand.cs" />
     <Compile Include="commands\OpenFilterTabCommand.cs" />
+    <Compile Include="converters\BoolToVisabilityConvertor.cs" />
     <Compile Include="converters\FilterParamsCreator.cs" />
     <Compile Include="Model\AstroidPanelUC_M.cs" />
     <Compile Include="Model\FilterAstroParams_M.cs" />
@@ -114,9 +115,6 @@
     </Compile>
     <Compile Include="ViewModels\AstroidViewModel.cs" />
     <Compile Include="Model\NEOModel.cs" />
-    <Compile Include="UserControls\NEOUC.xaml.cs">
-      <DependentUpon>NEOUC.xaml</DependentUpon>
-    </Compile>
     <Page Include="Dictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,10 +151,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\NEOUC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControls\PODUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

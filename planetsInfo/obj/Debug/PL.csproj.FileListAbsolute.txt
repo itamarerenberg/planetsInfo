@@ -54,14 +54,12 @@ C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\DL.dll.config
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidUC.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\MainWindow.g.cs
-C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\NEOUC.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PODUserControl.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PlanetInfoUC.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SSPanelUC.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\AstroidUC.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\MainWindow.baml
-C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\NEOUC.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PODUserControl.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\PlanetInfoUC.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SSPanelUC.baml
@@ -99,8 +97,9 @@ C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignThem
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\App.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.baml
-C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.g.cs
-C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\View\FilterTab.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\Dictionary.baml
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.g.cs
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\Dictionary.baml
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.g.cs
+C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.baml

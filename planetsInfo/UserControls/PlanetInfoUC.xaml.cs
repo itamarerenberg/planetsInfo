@@ -24,7 +24,6 @@ namespace planetsInfo.UserControls
         public PlanetInfoUC()
         {
             InitializeComponent();
-            this.DataContext = new PlanetInfo_UC_VM("Mercury");
         }
     }
 }

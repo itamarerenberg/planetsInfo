@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\planetsInfo",
+    "\\planetsInfo\\Model"
   ],
-  "SelectedNode": "\\planetsInfo.sln",
   "PreviewInSolutionExplorer": false
 }

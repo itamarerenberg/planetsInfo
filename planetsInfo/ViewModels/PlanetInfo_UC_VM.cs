@@ -25,7 +25,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Name;
             }
@@ -40,7 +40,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.GeneralInfo;
             }
@@ -55,7 +55,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Category;
             }
@@ -70,7 +70,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Location;
             }
@@ -85,7 +85,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.AvgDistanceFromSun;
             }
@@ -100,7 +100,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.OrbitalPeriod;
             }
@@ -115,7 +115,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.AvgOrbitalSpeed;
             }
@@ -130,7 +130,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Inclination;
             }
@@ -145,7 +145,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Satellites;
             }
@@ -160,7 +160,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Radius;
             }
@@ -175,7 +175,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.SurfaceArea;
             }
@@ -190,7 +190,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Mass;
             }
@@ -205,7 +205,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.Density;
             }
@@ -220,7 +220,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.RotationPeriod;
             }
@@ -235,7 +235,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.RotationSpeed;
             }
@@ -250,7 +250,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.AxialTilt;
             }
@@ -265,7 +265,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.AvgSurfaceTemp;
             }
@@ -280,7 +280,7 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                if (loading)
+                if (loading || !HasContent)
                     return loadingMassege;
                 return model.ImageUrl;
             }
@@ -291,13 +291,24 @@ namespace planetsInfo.ViewModel
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(ImageUrl)));
             }
         }
-
+        bool hasContent;
+        public bool HasContent 
+        {
+            get => hasContent;
+            set { hasContent = value; }
+        }
         #endregion
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public PlanetInfo_UC_VM(string planetName)
+        public PlanetInfo_UC_VM(string planetName = null)
         {
+            if (planetName == null)
+            {
+                HasContent = false;
+                return;
+            }
+            HasContent = true;
             model = new PlanetInfo_UC_M();
             loading = true;
             Task loader = Task.Factory.StartNew(()=> model.LoadData(planetName));
