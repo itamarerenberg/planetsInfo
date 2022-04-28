@@ -6,11 +6,34 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using MaterialDesignThemes.Wpf;
+using planetsInfo.commands;
+using planetsInfo.View;
 
 namespace planetsInfo.ViewModels
 {
     class AstroidPanelUC_VM : INotifyPropertyChanged
     {
+
+
+        #region filter
+        OpenFilterTabCommand openFilterTab;
+        public OpenFilterTabCommand OpenFilterTab
+        {
+            get
+            {
+                return openFilterTab;
+            }
+            set
+            {
+                openFilterTab = value;
+            }
+        }
+
+        #endregion
+       
+        
         AstroidPanelUC_M model;
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -39,6 +62,7 @@ namespace planetsInfo.ViewModels
         {
             get
             {
+
                 if (selectedAstroidName == null)
                     return null;
                 return new AstroidViewModel(model.Astroids.First(a => a.name == selectedAstroidName));
@@ -49,7 +73,25 @@ namespace planetsInfo.ViewModels
         public AstroidPanelUC_VM()
         {
             model = new AstroidPanelUC_M();
-            Task loader = Task.Factory.StartNew(() => model.LoadData(new DateTime(1999, 12, 1), new DateTime(1999, 12, 1), 0f, 2.7f, null));
+            openFilterTab = new OpenFilterTabCommand(open_filter_tab);
+            loadData(new FilterAstroParams_M()); // default values
+        }
+
+        private void open_filter_tab()
+        {
+            FilterTabWindow filterTab = new FilterTabWindow(loadData);
+            filterTab.ShowDialog();
+        }
+
+        void loadData(FilterAstroParams_M filterParams)
+        {
+            Task loader = Task.Factory.StartNew(() => model.LoadData(
+                filterParams.from,
+                filterParams.until,
+                filterParams.min_diameter,
+                filterParams.max_diameter,
+                filterParams.isDengarouse
+                ));
             loader.ContinueWith((t) =>
             {
                 if (PropertyChanged != null)

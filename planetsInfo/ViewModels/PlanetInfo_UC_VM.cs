@@ -12,22 +12,26 @@ namespace planetsInfo.ViewModel
 {
     class PlanetInfo_UC_VM : INotifyPropertyChanged
     {
-        PlanetInfo_UC_M Model
+        PlanetInfo_UC_M model
         {
             get;
             set;
         }
 
         #region properties
+        bool loading;
+        string loadingMassege = "loading...";
         public string Name
         {
             get
             {
-                return Model.Name;
+                if (loading)
+                    return loadingMassege;
+                return model.Name;
             }
             set
             {
-                Model.Name = value;
+                model.Name = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Name)));
             }
@@ -36,11 +40,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.GeneralInfo;
+                if (loading)
+                    return loadingMassege;
+                return model.GeneralInfo;
             }
             set
             {
-                Model.GeneralInfo = value;
+                model.GeneralInfo = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(GeneralInfo)));
             }
@@ -49,11 +55,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Category;
+                if (loading)
+                    return loadingMassege;
+                return model.Category;
             }
             set
             {
-                Model.Category = value;
+                model.Category = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Category)));
             }
@@ -62,11 +70,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Location;
+                if (loading)
+                    return loadingMassege;
+                return model.Location;
             }
             set
             {
-                Model.Location = value;
+                model.Location = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Location)));
             }
@@ -75,11 +85,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.AvgDistanceFromSun;
+                if (loading)
+                    return loadingMassege;
+                return model.AvgDistanceFromSun;
             }
             set
             {
-                Model.AvgDistanceFromSun = value;
+                model.AvgDistanceFromSun = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(AvgDistanceFromSun)));
             }
@@ -88,11 +100,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.OrbitalPeriod;
+                if (loading)
+                    return loadingMassege;
+                return model.OrbitalPeriod;
             }
             set
             {
-                Model.OrbitalPeriod = value;
+                model.OrbitalPeriod = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(OrbitalPeriod)));
             }
@@ -101,11 +115,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.AvgOrbitalSpeed;
+                if (loading)
+                    return loadingMassege;
+                return model.AvgOrbitalSpeed;
             }
             set
             {
-                Model.AvgOrbitalSpeed = value;
+                model.AvgOrbitalSpeed = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(AvgOrbitalSpeed)));
             }
@@ -114,11 +130,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Inclination;
+                if (loading)
+                    return loadingMassege;
+                return model.Inclination;
             }
             set
             {
-                Model.Inclination = value;
+                model.Inclination = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Inclination)));
             }
@@ -127,11 +145,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Satellites;
+                if (loading)
+                    return loadingMassege;
+                return model.Satellites;
             }
             set
             {
-                Model.Satellites = value;
+                model.Satellites = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Satellites)));
             }
@@ -140,11 +160,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Radius;
+                if (loading)
+                    return loadingMassege;
+                return model.Radius;
             }
             set
             {
-                Model.Radius = value;
+                model.Radius = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Radius)));
             }
@@ -153,11 +175,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.SurfaceArea;
+                if (loading)
+                    return loadingMassege;
+                return model.SurfaceArea;
             }
             set
             {
-                Model.SurfaceArea = value;
+                model.SurfaceArea = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(SurfaceArea)));
             }
@@ -166,11 +190,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Mass;
+                if (loading)
+                    return loadingMassege;
+                return model.Mass;
             }
             set
             {
-                Model.Mass = value;
+                model.Mass = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Mass)));
             }
@@ -179,11 +205,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.Density;
+                if (loading)
+                    return loadingMassege;
+                return model.Density;
             }
             set
             {
-                Model.Density = value;
+                model.Density = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(Density)));
             }
@@ -192,11 +220,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.RotationPeriod;
+                if (loading)
+                    return loadingMassege;
+                return model.RotationPeriod;
             }
             set
             {
-                Model.RotationPeriod = value;
+                model.RotationPeriod = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(RotationPeriod)));
             }
@@ -205,11 +235,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.RotationSpeed;
+                if (loading)
+                    return loadingMassege;
+                return model.RotationSpeed;
             }
             set
             {
-                Model.RotationSpeed = value;
+                model.RotationSpeed = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(RotationSpeed)));
             }
@@ -218,11 +250,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.AxialTilt;
+                if (loading)
+                    return loadingMassege;
+                return model.AxialTilt;
             }
             set
             {
-                Model.AxialTilt = value;
+                model.AxialTilt = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(AxialTilt)));
             }
@@ -231,11 +265,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.AvgSurfaceTemp;
+                if (loading)
+                    return loadingMassege;
+                return model.AvgSurfaceTemp;
             }
             set
             {
-                Model.AxialTilt = value;
+                model.AxialTilt = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(AvgSurfaceTemp)));
             }
@@ -244,11 +280,13 @@ namespace planetsInfo.ViewModel
         {
             get
             {
-                return Model.ImageUrl;
+                if (loading)
+                    return loadingMassege;
+                return model.ImageUrl;
             }
             set
             {
-                Model.ImageUrl = value;
+                model.ImageUrl = value;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(nameof(ImageUrl)));
             }
@@ -260,10 +298,12 @@ namespace planetsInfo.ViewModel
 
         public PlanetInfo_UC_VM(string planetName)
         {
-            Model = new PlanetInfo_UC_M();
-            Task loader = Task.Factory.StartNew(()=> Model.LoadData(planetName));
+            model = new PlanetInfo_UC_M();
+            loading = true;
+            Task loader = Task.Factory.StartNew(()=> model.LoadData(planetName));
             loader.ContinueWith((t) =>
             {
+                loading = false;
                 if (PropertyChanged != null)
                     PropertyChanged(this, new PropertyChangedEventArgs(""));//all properties has changed
             });

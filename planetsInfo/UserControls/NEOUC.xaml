@@ -9,7 +9,9 @@
     <Grid>
         <TextBox Name="tbDiameter" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" Text="Diameter" VerticalAlignment="Top" Width="180"/>
         <DatePicker Name="dpDate" HorizontalAlignment="Left" Margin="79,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.47,0.632"/>
-        <Button x:Name="btnShow" Content="Show" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="172" Height="31"/>
-
+        <Button x:Name="btnShow" Content="display" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="172" Height="31"
+                Command="{Binding display_command}" CommandParameter="">
+        </Button>
+        
     </Grid>
 </UserControl>

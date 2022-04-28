@@ -30,7 +30,7 @@
                 <planetsInfo:PODUserControl/>
             </TabItem>
             <TabItem>
-                <UserControls:SearchPanelUserControl/>
+                <planetsInfo:NEOUC/>
             </TabItem>
         </TabControl>
         <!--<UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->

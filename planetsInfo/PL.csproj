@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,6 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LBT.RestSharp, Version=106.11.7.1, Culture=neutral, PublicKeyToken=71d158dc4477a6b4, processorArchitecture=MSIL">
@@ -56,6 +58,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -74,7 +77,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="commands\FilterCommand.cs" />
+    <Compile Include="commands\OpenFilterTabCommand.cs" />
+    <Compile Include="converters\FilterParamsCreator.cs" />
     <Compile Include="Model\AstroidPanelUC_M.cs" />
+    <Compile Include="Model\FilterAstroParams_M.cs" />
     <Compile Include="Model\PlanetInfo_UC_M.cs" />
     <Compile Include="Model\SearchResultPanelModel.cs" />
     <Compile Include="Model\SSPanelUC_M.cs" />
@@ -94,6 +101,7 @@
       <DependentUpon>SSPanelUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AstroidPanelUC_VM.cs" />
+    <Compile Include="ViewModels\NEOUC_VM.cs" />
     <Compile Include="ViewModels\PlanetInfo_UC_VM.cs" />
     <Compile Include="ViewModels\SearchResultPanelViewModel.cs" />
     <Compile Include="ViewModels\SearchResultViewModel.cs" />
@@ -106,7 +114,6 @@
     <Compile Include="UserControls\NEOUC.xaml.cs">
       <DependentUpon>NEOUC.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\NEOViewModel.cs" />
     <Page Include="UserControls\AstroidPanelUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -123,6 +130,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\FilterTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -130,6 +141,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\FilterTab.xaml.cs">
+      <DependentUpon>FilterTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -194,6 +208,7 @@
       <Name>BL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.4.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
