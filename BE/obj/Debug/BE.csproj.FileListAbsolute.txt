@@ -10,7 +10,6 @@ C:\Users\elchanan\Source\Repos\planetsInfo\BE\bin\Debug\BE.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\bin\Debug\BE.pdb
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\bin\Debug\LBT.RestSharp.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\bin\Debug\LBT.RestSharp.xml
-C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.csproj.AssemblyReference.cache
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.dll
 C:\Users\elchanan\Source\Repos\planetsInfo\BE\obj\Debug\BE.pdb

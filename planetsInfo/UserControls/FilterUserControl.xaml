@@ -1,16 +1,18 @@
-﻿<Window x:Class="planetsInfo.View.FilterTabWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:converters="clr-namespace:planetsInfo.converters"
-        mc:Ignorable="d"
-        Title="FilterTab" Height="450" Width="800">
-    <Window.Resources>
+﻿<UserControl x:Class="planetsInfo.UserControls.FilterUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converters="clr-namespace:planetsInfo.converters"
+             xmlns:local="clr-namespace:planetsInfo.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
         <ResourceDictionary>
+            <!--<conver x:Key="ParamsColector"/>-->
             <converters:FilterParamsCreator x:Key="ParamsColector"/>
         </ResourceDictionary>
-    </Window.Resources>
+    </UserControl.Resources>
     <StackPanel>
 
         <StackPanel>
@@ -35,4 +37,4 @@
             </Button.CommandParameter>
         </Button>
     </StackPanel>
-</Window>
+</UserControl>

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\App.xaml
-11-2085110697
+11-820075627
 
-341963557296
+34-2067780111
 25-1737493576
-Dictionary.xaml;UserControls\AstroidPanelUC.xaml;UserControls\AstroidUC.xaml;UserControls\SearchedItemUserControl.xaml;UserControls\SearchPanelUserControl.xaml;View\FilterTab.xaml;View\MainWindow.xaml;UserControls\NEOUC.xaml;UserControls\PODUserControl.xaml;UserControls\PlanetInfoUC.xaml;UserControls\SSPanelUC.xaml;
+Dictionary.xaml;UserControls\AstroidPanelUC.xaml;UserControls\AstroidUC.xaml;UserControls\FilterUserControl.xaml;UserControls\SearchedItemUserControl.xaml;UserControls\SearchPanelUserControl.xaml;View\MainWindow.xaml;UserControls\NEOUC.xaml;UserControls\PODUserControl.xaml;UserControls\PlanetInfoUC.xaml;UserControls\SSPanelUC.xaml;
 
-False
+True
 

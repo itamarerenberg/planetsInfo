@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using MaterialDesignThemes.Wpf;
 using planetsInfo.commands;
-using planetsInfo.View;
+using planetsInfo.UserControls;
+using System.Web.UI;
 
 namespace planetsInfo.ViewModels
 {
     class AstroidPanelUC_VM : INotifyPropertyChanged
     {
-
+        AstroidPanelUC view ;
 
         #region filter
         OpenFilterTabCommand openFilterTab;
@@ -70,17 +71,21 @@ namespace planetsInfo.ViewModels
            
         }
 
-        public AstroidPanelUC_VM()
+        public AstroidPanelUC_VM(AstroidPanelUC view)
         {
+            this.view = view;
             model = new AstroidPanelUC_M();
             openFilterTab = new OpenFilterTabCommand(open_filter_tab);
             loadData(new FilterAstroParams_M()); // default values
+            view.filteruc.DataContext = new NEOUC_VM(view.filteruc, loadData);
+
+
         }
 
         private void open_filter_tab()
         {
-            FilterTabWindow filterTab = new FilterTabWindow(loadData);
-            filterTab.ShowDialog();
+            view.filteruc.Visibility = System.Windows.Visibility.Visible;
+
         }
 
         void loadData(FilterAstroParams_M filterParams)

@@ -24,7 +24,7 @@ namespace planetsInfo.UserControls
         public AstroidPanelUC()
         {
             InitializeComponent();
-            DataContext = new AstroidPanelUC_VM();
+            DataContext = new AstroidPanelUC_VM(this);
         }
     }
 }

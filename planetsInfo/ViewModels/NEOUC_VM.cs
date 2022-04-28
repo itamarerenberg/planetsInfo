@@ -1,5 +1,6 @@
 ﻿using planetsInfo.commands;
 using planetsInfo.Model;
+using planetsInfo.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace planetsInfo.ViewModels
     class NEOUC_VM
     {
         FilterCommand filterCmnd;
-        Window view;
+        FilterUserControl view;
         public FilterCommand FilterCmnd
         {
             get => filterCmnd;
@@ -21,7 +22,7 @@ namespace planetsInfo.ViewModels
         }
         Action<FilterAstroParams_M> filterAction;
 
-        public NEOUC_VM(Window view, Action<FilterAstroParams_M> filter)
+        public NEOUC_VM(FilterUserControl view, Action<FilterAstroParams_M> filter)
         {
             FilterCmnd = new FilterCommand(do_filtering);
             filterAction = filter;
@@ -31,7 +32,7 @@ namespace planetsInfo.ViewModels
         void do_filtering(FilterAstroParams_M filterPrams)
         {
             filterAction(filterPrams);
-            view.Close();
+            view.Visibility=Visibility.Hidden;
         }
     }
 }

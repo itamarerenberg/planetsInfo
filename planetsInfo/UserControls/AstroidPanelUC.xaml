@@ -15,15 +15,18 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <materialDesign:Card>
-        <ListView x:Name="lvAstroids" Width="auto" ItemsSource="{Binding AstroidsNames}" SelectionMode="Single" SelectedItem="{Binding SelectedAstroidName}">
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
-                    
-                </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+            <StackPanel>
+                <Button Command="{Binding OpenFilterTab}" Grid.Column="2"  Height="20" Width="100"/>
+                <local:FilterUserControl Visibility="Hidden" x:Name="filteruc"/>
+                <ListView x:Name="lvAstroids" Width="auto" ItemsSource="{Binding AstroidsNames}" SelectionMode="Single" SelectedItem="{Binding SelectedAstroidName}">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
+
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+            </StackPanel>
         </materialDesign:Card>
         <planetsInfo:AstroidUC Grid.Column="1" HorizontalAlignment="Left" DataContext="{Binding Path=SelectedAstroid}" Width="auto"/>
-        <Button Command="{Binding OpenFilterTab}" Grid.Column="2"  Height="100" Width="100"/>
     </Grid>
 </UserControl>

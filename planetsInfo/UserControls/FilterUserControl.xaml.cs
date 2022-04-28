@@ -1,6 +1,4 @@
-﻿using planetsInfo.Model;
-using planetsInfo.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,19 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace planetsInfo.View
+namespace planetsInfo.UserControls
 {
     /// <summary>
-    /// Interaction logic for FilterTab.xaml
+    /// Interaction logic for FilterUserControl.xaml
     /// </summary>
-    public partial class FilterTabWindow : Window
+    public partial class FilterUserControl : UserControl
     {
-        public FilterTabWindow(Action<FilterAstroParams_M> filter)
+        public FilterUserControl()
         {
             InitializeComponent();
-            this.DataContext = new NEOUC_VM(this, filter);
         }
     }
 }
