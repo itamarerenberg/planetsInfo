@@ -14,19 +14,22 @@
     <!--<Window.Background>
         <ImageBrush ImageSource="C:\Users\erenb\source\repos\planetsInfo\thems\backgrownd1.jpg"/>
     </Window.Background>-->
-    
+
     <Grid>
-        <TabControl Name="mainTab" Style="{StaticResource MaterialDesignTabControl}" Background="Cyan">
+        <TabControl ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="mainTab" TabStripPlacement="Left" Background="Cyan">
             <TabItem>
                 <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
                     <TextBlock Text="SolarSystem" TextAlignment="Center" Width="auto" Background="Yellow"/>
+                    </StackPanel>
                 </TabItem.Header>
                 <UserControls:SSPanelUC/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
-                    <TextBlock Text="Astroids" TextAlignment="Center" Width="auto" Background="Red"/>
-                </TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Astroids" TextAlignment="Center" Width="auto" Background="Red"/>
+                </StackPanel></TabItem.Header>
                 <UserControls:AstroidPanelUC/>
             </TabItem>
             <TabItem>
@@ -34,6 +37,12 @@
                     <TextBlock Text="POD" TextAlignment="Center" Width="auto" Background="Cyan"/>
                 </TabItem.Header>
                 <planetsInfo:PODUserControl/>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="search" TextAlignment="Center" Width="auto" Background="Cyan"/>
+                </TabItem.Header>
+                <UserControls:SearchPanelUserControl />
             </TabItem>
         </TabControl>
         <!--<UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->

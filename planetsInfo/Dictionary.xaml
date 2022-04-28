@@ -10,6 +10,15 @@
         <Setter Property="Margin" Value="5"/>
 
     </Style>
+    <Style TargetType="TextBlock" x:Key="text1">
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="Height" Value="auto"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Foreground" Value="Red"/>
+
+    </Style>
     <Style TargetType="materialDesign:Card" x:Key="textCard">
         <Setter Property="Margin" Value="2"/>
         <Setter Property="Background" Value="Cyan"/>
@@ -25,7 +34,14 @@
             </Trigger>
         </Style.Triggers>-->
     </Style>
-
+    <!--<Style TargetType="TabControl" x:Key="tab">
+        <Style.Triggers>
+            <Trigger Property="IsMouseDirectlyOver" Value="True">
+                <Setter TargetName="ButtonOpenMenu" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            
+        </Style.Triggers>
+    </Style>--> 
     <Style TargetType="Border" x:Key="border">
         <Setter Property="Effect">
             <Setter.Value>

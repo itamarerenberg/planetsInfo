@@ -6,96 +6,56 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="400">
-    <Grid>
-        
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <materialDesign:Card Grid.Row="0" Width="auto">
-            <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock TextWrapping="Wrap" Text="{Binding id}" Grid.Column="1"/>
-            <Label Content="id: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="1" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding neo_reference_id}" Grid.Column="1" />
-                <Label Content="neo_reference_id: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="2" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding name}" Grid.Column="1"/>
-                <Label Content="name: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="3" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding nasa_jpl_url}" Grid.Column="1"/>
-                <Label Content="nasa_jpl_url: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="4" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding absolute_magnitude_h}" Grid.Column="1"/>
-                <Label Content="absolute_magnitude_h: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="5" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_min}" Grid.Column="1"/>
-                <Label Content="estimated_diameter_min: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="6" Width="auto">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_max}" Grid.Column="1"/>
-                <Label Content="estimated_diameter_max: "/>
-            </Grid>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="7" Width="auto">
+             d:DesignHeight="250" d:DesignWidth="500">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Dictionary.xaml"/>
+    </UserControl.Resources>
+    <Border Style="{StaticResource border}" Background="Cyan">
+        <StackPanel>
 
-            <CheckBox Content="is_potentially_hazardous_asteroid" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7"/>
-        </materialDesign:Card>
-        <materialDesign:Card Grid.Row="8" Width="auto">
-            <CheckBox Content="is_sentry_object" IsChecked="{Binding is_sentry_object}" Grid.Row="8"/>
-        </materialDesign:Card>
-    </Grid>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="name: " FontSize="40" Style="{StaticResource text1}"/>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="40" Text="{Binding name}" Style="{StaticResource text1}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="id: " FontSize="40" Style="{StaticResource text1}"/>
+
+                    <TextBlock TextWrapping="Wrap" FontSize="40" Text="{Binding id}" Style="{StaticResource text1}"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel >
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="nasa_jpl_url: " Style="{StaticResource text1}"/>
+
+                        <TextBlock TextWrapping="Wrap" Text="{Binding nasa_jpl_url}" Style="{StaticResource text1}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="absolute_magnitude_h: " Style="{StaticResource text1}"/>
+
+                        <TextBlock TextWrapping="Wrap" Text="{Binding absolute_magnitude_h}" Style="{StaticResource text1}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="estimated_diameter_min: " Style="{StaticResource text1}"/>
+
+                        <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_min}" Style="{StaticResource text1}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="estimated_diameter_max: " Style="{StaticResource text1}"/>
+
+                        <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_max}" Style="{StaticResource text1}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel>
+                    <CheckBox Content="is_potentially_hazardous_asteroid" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7"/>
+                    <CheckBox Content="is_sentry_object" IsChecked="{Binding is_sentry_object}" Grid.Row="8"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Border>
 </UserControl>
