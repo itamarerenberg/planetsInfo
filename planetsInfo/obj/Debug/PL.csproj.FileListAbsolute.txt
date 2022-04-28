@@ -99,3 +99,4 @@ C:\Users\erenb\source\repos\planetsInfo\planetsInfo\bin\Debug\MaterialDesignThem
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\App.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchedItemUserControl.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchPanelUserControl.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\Dictionary.baml

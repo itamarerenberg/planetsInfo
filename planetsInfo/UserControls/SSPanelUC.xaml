@@ -3,21 +3,72 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Dictionary.xaml"/>
+    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <ListView Name="lbPlanets" ItemsSource="{Binding Path=planets}" SelectionMode="Single" SelectedItem="{Binding Path=SelectedItem}">
-            <ListView.ItemContainerStyle>
+        <Border Background="Black" Style="{StaticResource border}">
+            <!--<Border.Effect>
+                <DropShadowEffect ShadowDepth="3"/>
+            </Border.Effect>-->
+            <ListView Name="lbPlanets" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemsSource="{Binding Path=planets}" SelectionMode="Single" SelectedItem="{Binding Path=SelectedItem}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Background="{x:Null}" Orientation="Vertical"></StackPanel>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="{x:Null}" BorderThickness="0" Width="auto" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Grid.Column="2" Style="{StaticResource border}">
+                            <!--<Border.Effect>
+                                <DropShadowEffect ShadowDepth="3"/>
+                            </Border.Effect>-->
+                            <ContentPresenter>
+                                <ContentPresenter.ContentTemplate>
+                                    <DataTemplate>
+                                        <materialDesign:Card Background="{x:Null}" Style="{StaticResource pic1}">
+                                            <Grid>
+                                                <Image Source="{Binding planetsImage}" Style="{StaticResource ResourceKey=pic}"/>
+                                                <TextBlock Text="{Binding planetsName}" Background="{x:Null}" Foreground="Red" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                </TextBlock>
+                                            </Grid>
+                                        </materialDesign:Card>
+                                    </DataTemplate>
+                                </ContentPresenter.ContentTemplate>
+
+                            </ContentPresenter>
+
+                            <!--<Border.Background>
+                <ImageBrush ImageSource="{Binding ImageUrl}"/>
+            </Border.Background>-->
+                        </Border>
+                        <!--<StackPanel Orientation="Vertical">
+                        <TextBlock Text="{Binding planetsName}">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="{Binding planetsImage}"/>
+                            </TextBlock.Background>
+                        </TextBlock>
+                        -->
+                        <!--<Image Source="{Binding planetsImage}" Width="auto" Height="auto"/>-->
+                        <!--
+                    </StackPanel>-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <!--<ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
 
                 </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+            </ListView.ItemContainerStyle>-->
+            </ListView>
+        </Border>
         <local:PlanetInfoUC DataContext="{Binding SelectedPlanet}" Grid.Column="1"/>
     </Grid>
 </UserControl>

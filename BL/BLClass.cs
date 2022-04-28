@@ -50,7 +50,7 @@ namespace BL
             return dlc.GetNearEarthAstroid(from, until, min, max, isDengerous);
         }
 
-        public List<string> GetSSPlanets()
+        public List<BE.SSPanel> GetSSPlanets()
         {
             return dlc.GetSSPlanets();
         }

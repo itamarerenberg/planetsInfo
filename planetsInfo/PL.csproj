@@ -107,6 +107,10 @@
       <DependentUpon>NEOUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\NEOViewModel.cs" />
+    <Page Include="Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AstroidPanelUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

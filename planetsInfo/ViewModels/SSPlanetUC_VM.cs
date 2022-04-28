@@ -1,4 +1,5 @@
-﻿using planetsInfo.Model;
+﻿using BE;
+using planetsInfo.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,8 +17,8 @@ namespace planetsInfo.ViewModel
         SSPanelUC_M model;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        string selectedItem;
-        public string SelectedItem
+        SSPanel selectedItem;
+        public SSPanel SelectedItem
         {
             get => selectedItem;
             set
@@ -35,11 +36,11 @@ namespace planetsInfo.ViewModel
             {
                 if (selectedItem == null)
                     return null;
-                return new PlanetInfo_UC_VM(SelectedItem);
+                return new PlanetInfo_UC_VM(SelectedItem.planetsName);
             }
         }
 
-        public ObservableCollection<string> planets
+        public ObservableCollection<SSPanel> planets
         {
             get => model.planets;
             set
@@ -50,6 +51,8 @@ namespace planetsInfo.ViewModel
 
             }
         }
+
+        
 
         public SSPlanetUC_VM()
         {

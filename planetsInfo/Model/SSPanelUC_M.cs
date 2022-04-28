@@ -10,7 +10,8 @@ namespace planetsInfo.Model
     class SSPanelUC_M
     {
         BL.BLClass source;
-        public ObservableCollection<string> planets;
+        public ObservableCollection<BE.SSPanel> planets;
+
 
         public SSPanelUC_M()
         {
@@ -19,7 +20,9 @@ namespace planetsInfo.Model
 
         public void LoadData()
         {
-            planets = new ObservableCollection<string>(source.GetSSPlanets());
+            planets = new ObservableCollection<BE.SSPanel>(source.GetSSPlanets());
+           
+            
         }
     }
 }

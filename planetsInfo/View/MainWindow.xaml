@@ -10,28 +10,37 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
-        FontFamily="{materialDesign:MaterialDesignFont}">
+        FontFamily="{materialDesign:MaterialDesignFont}" WindowState="Maximized">
     <!--<Window.Background>
         <ImageBrush ImageSource="C:\Users\erenb\source\repos\planetsInfo\thems\backgrownd1.jpg"/>
     </Window.Background>-->
     
     <Grid>
-        <TabControl Name="mainTab" Style="{StaticResource MaterialDesignTabControl}">
+        <TabControl Name="mainTab" Style="{StaticResource MaterialDesignTabControl}" Background="Cyan">
             <TabItem>
                 <TabItem.Header>
-                    <Canvas Width="auto" Height="auto" Background="Aqua"/>
+                    <TextBlock Text="SolarSystem" TextAlignment="Center" Width="auto" Background="Yellow"/>
                 </TabItem.Header>
                 <UserControls:SSPanelUC/>
             </TabItem>
             <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Astroids" TextAlignment="Center" Width="auto" Background="Red"/>
+                </TabItem.Header>
                 <UserControls:AstroidPanelUC/>
             </TabItem>
             <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="POD" TextAlignment="Center" Width="auto" Background="Cyan"/>
+                </TabItem.Header>
                 <planetsInfo:PODUserControl/>
             </TabItem>
-            <TabItem>
+            <!--<TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="Search" TextAlignment="Center" Width="auto" Background="Green"/>
+                </TabItem.Header>
                 <UserControls:SearchPanelUserControl/>
-            </TabItem>
+            </TabItem>-->
         </TabControl>
         <!--<UserControls:SearchPanelUserControl HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->
         <!--<UserControls:SSPanelUC HorizontalAlignment="Left" Height="401" Margin="10,10,0,0" VerticalAlignment="Top" Width="773"/>-->

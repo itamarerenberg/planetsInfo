@@ -41,9 +41,18 @@ namespace DL
             return solarSystemInfo.info[planetName];
         }
 
-        public List<string> GetSSPlanets()
+        public List<BE.SSPanel> GetSSPlanets()
         {
-            return solarSystemInfo.info.Keys.ToList();
+            var result = new List<SSPanel>();
+            foreach (var item in solarSystemInfo.info.Keys)
+            {
+                result.Add(new SSPanel
+                {
+                    planetsName = item,
+                    planetsImage = GetPlanet(item).ImageUrl
+                });
+            }
+            return result;
         }
 
         public IEnumerable<Astroid> GetNearEarthAstroid(DateTime startDate, DateTime endDate, float minDiameter = 0, float maxDiameter = float.PositiveInfinity, bool? isDangeruse = null)
