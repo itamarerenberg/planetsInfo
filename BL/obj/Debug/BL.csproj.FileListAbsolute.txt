@@ -31,3 +31,4 @@ C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\DL.dll.config
 C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\Newtonsoft.Json.xml
 C:\Users\elchanan\source\repos\planetsInfo\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\elchanan\source\repos\planetsInfo\BL\bin\Debug\BL.dll.config
+C:\Users\erenb\source\repos\planetsInfo\BL\bin\Debug\BL.dll.config

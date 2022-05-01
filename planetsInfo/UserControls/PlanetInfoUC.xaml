@@ -29,14 +29,14 @@
                     <!--Category-->
                     <Border Style="{StaticResource border}">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="lCategory" Text="category: " Style="{StaticResource text}"/>
+                            <TextBlock Name="lCategory" Text="Category: " Style="{StaticResource text}"/>
                             <TextBlock Name="tbCategory" Text="{Binding Path=Category}" Style="{StaticResource text}"/>
                         </StackPanel>
                     </Border>
                     <!--Location-->
                     <Border Style="{StaticResource border}">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="lLocation" Text="location: " Style="{StaticResource text}"/>
+                            <TextBlock Name="lLocation" Text="Location: " Style="{StaticResource text}"/>
                             <TextBlock Name="tbLocation" Text="{Binding Path=Location}" Style="{StaticResource text}"/>
                         </StackPanel>
                     </Border>
@@ -143,19 +143,21 @@
                         <Image Source="{Binding ImageUrl}" Width="auto" Height="auto"/>
                     </Border>
                     <!--Name-->
-                    <Border Style="{StaticResource border}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Name="lName" Text="name: " Style="{StaticResource text}"/>
-                            <TextBlock Name="tbName" Text="{Binding Path=Name}" Style="{StaticResource text}"/>
-                        </StackPanel>
-                    </Border>
-                    <!--GeneralInfo-->
-                    <Border Style="{StaticResource border}">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Name="lGeneralInfo" Text="general info: " TextAlignment="Left" Style="{StaticResource text}"/>
-                            <TextBlock Name="tbGeneralInfo" Text="{Binding Path=GeneralInfo}" Style="{StaticResource text}" Width="310" TextWrapping="Wrap"/>
-                        </StackPanel>
-                    </Border>
+                    <StackPanel  VerticalAlignment="Bottom" Margin="20">
+                        <Border Style="{StaticResource border}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Name="lName" Text="Name: " Style="{StaticResource text}"/>
+                                <TextBlock Name="tbName" Text="{Binding Path=Name}" Style="{StaticResource text}"/>
+                            </StackPanel>
+                        </Border>
+                        <!--GeneralInfo-->
+                        <Border Style="{StaticResource border}">
+                            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                                <TextBlock Name="lGeneralInfo" Text="General Info: " TextAlignment="Left" Style="{StaticResource text}"/>
+                                <TextBlock Name="tbGeneralInfo" Text="{Binding Path=GeneralInfo}" Style="{StaticResource text}" Width="310" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
                 </StackPanel>
             </ScrollViewer>
             <!--<Border.Background>

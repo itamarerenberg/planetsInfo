@@ -24,21 +24,21 @@
                 <!--title-->
                 <Border Style="{StaticResource border}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Name="ltitle" Text="title: "/>
+                        <TextBlock Name="ltitle" Text="Title: "/>
                         <TextBlock Name="tbtitle" Text="{Binding Path=title}"/>
                     </StackPanel>
                 </Border>
                 <!--nasa_id-->
                 <Border Style="{StaticResource border}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Name="lnasa_id" Text="general info: "/>
+                        <TextBlock Name="lnasa_id" Text="General Info: "/>
                         <TextBlock Name="tbnasa_id" Text="{Binding Path=nasa_id}"/>
                     </StackPanel>
                 </Border>
                 <!--date_created-->
                 <Border Style="{StaticResource border}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Name="ldate_created" Text="date_created: "/>
+                        <TextBlock Name="ldate_created" Text="Date Created: "/>
                         <TextBlock Name="tbdate_created" Text="{Binding Path=date_created}"/>
                     </StackPanel>
                 </Border>
@@ -47,7 +47,7 @@
                 <!--location-->
                 <Border Style="{StaticResource border}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Name="llocation" Text="location: "/>
+                        <TextBlock Name="llocation" Text="Location: "/>
                         <TextBlock Name="tblocation" Text="{Binding Path=location}"/>
                     </StackPanel>
                 </Border>

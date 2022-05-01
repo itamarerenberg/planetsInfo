@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="1">
-                <Border Style="{StaticResource border}" Margin="150,0" Width="auto" Height="auto" HorizontalAlignment="Left">
+                <Border Style="{StaticResource border}" Margin="170,0" Width="auto" Height="auto" HorizontalAlignment="Left">
                     <TextBlock  TextWrapping="Wrap" Foreground="White" FontSize="30" Text="Image of The Day" Width="auto" Height="auto" TextAlignment="Center" />
                 </Border>
                 <Border Style="{StaticResource border}" Height="500">
