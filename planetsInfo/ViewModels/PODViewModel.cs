@@ -12,6 +12,12 @@ namespace planetsInfo
         public event PropertyChangedEventHandler PropertyChanged;
 
         private PODModel model;
+
+        public string ImageUri
+        {
+            get => "https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes%2FESA_root_pillars.png?alt=media&token=fb981519-c395-40a4-a0cb-decfa0171efd";
+        }
+
         public string ImgUri {
             get { return model.ImgUri; }
             set { 

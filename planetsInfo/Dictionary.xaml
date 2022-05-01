@@ -1,10 +1,12 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<ResourceDictionary xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
                     xmlns:converters="clr-namespace:planetsInfo.converters">
     <Style TargetType="TextBlock" x:Key="text">
         <Setter Property="Background" Value="{x:Null}"/>
         <Setter Property="Width" Value="auto"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Height" Value="auto"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Margin" Value="5"/>
@@ -45,13 +47,11 @@
     <Style TargetType="Border" x:Key="border">
         <Setter Property="Effect">
             <Setter.Value>
-                <DropShadowEffect ShadowDepth="3"/>
+                <DropShadowEffect ShadowDepth="1"/>
             </Setter.Value>
         </Setter>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="Background" Value="Gray"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="15"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="CornerRadius" Value="1"/>
         <Setter Property="Margin" Value="4"/>
 
     </Style>
@@ -66,4 +66,81 @@
         </Style.Triggers>
     </Style>
     <converters:BoolToVisabilityConverter x:Key="BoolToVisabilityConverter"/>
+
+    <Style TargetType="{x:Type telerik:CarouselItem}">
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type telerik:CarouselItem}">
+                    <Border >
+                        <Border x:Name="CarouselItemMainBorder" 
+                  ClipToBounds="False" Height="100" Width="100" RenderTransformOrigin="0.5, 1" 
+                 
+                   Background="Transparent" BorderThickness="0" CornerRadius="0" SnapsToDevicePixels="True">
+
+                            <Image Source="{Binding planetsImage}" Style="{StaticResource ResourceKey=pic}"/>
+
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--<Style x:Key="ci" TargetType="{x:Type telerik:CarouselItem}">
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type telerik:CarouselItem}">
+                    <Border >
+                        <Border x:Name="CarouselItemMainBorder" 
+                  ClipToBounds="False" Height="300" Width="300" RenderTransformOrigin="0.5, 1" 
+                 
+                   Background="Transparent" BorderThickness="0" CornerRadius="0" SnapsToDevicePixels="True">
+
+                            <StackPanel Height="auto" Grid.Column="0">
+                                <Border Width="300" Style="{StaticResource border}">
+                                    <StackPanel>
+                                        <Image Source="{Binding Path=imgUri,IsAsync=True}" Width="auto" Height="auto"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource border}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Name="ltitle" Text="title: "/>
+                                        <TextBlock Name="tbtitle" Text="{Binding Path=title}"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource border}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Name="lnasa_id" Text="general info: "/>
+                                        <TextBlock Name="tbnasa_id" Text="{Binding Path=nasa_id}"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource border}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Name="ldate_created" Text="date_created: "/>
+                                        <TextBlock Name="tbdate_created" Text="{Binding Path=date_created}"/>
+                                    </StackPanel>
+                                </Border>
+
+
+                                <Border Style="{StaticResource border}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Name="llocation" Text="location: "/>
+                                        <TextBlock Name="tblocation" Text="{Binding Path=location}"/>
+                                    </StackPanel>
+                                </Border>
+
+
+
+
+
+                            </StackPanel>
+
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>-->
 </ResourceDictionary>

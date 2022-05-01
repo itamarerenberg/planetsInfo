@@ -11,17 +11,20 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
-    <Border Style="{StaticResource border}" Margin="10" Background="White" Visibility="{Binding HasContent, Converter={StaticResource BoolToVisabilityConverter}}">
-        <Grid Height="auto" Width="800" Background="{x:Null}">
+    <Border Style="{StaticResource border}" Margin="10" Visibility="{Binding HasContent, Converter={StaticResource BoolToVisabilityConverter}}">
+        <Border.Background >
+            <ImageBrush ImageSource="{Binding Image}"/>
+        </Border.Background>
+        <Grid Height="auto" Width="800">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Column="2">
+            <ScrollViewer Background="{x:Null}" VerticalScrollBarVisibility="Hidden" Grid.Column="0">
                 
-                <StackPanel Grid.Column="0">
+                <StackPanel Grid.Column="0" Background="{x:Null}">
 
                     <!--Category-->
                     <Border Style="{StaticResource border}">
@@ -132,10 +135,10 @@
                 </StackPanel>
 
             </ScrollViewer>
-            <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Column="0">
+            <ScrollViewer Background="{x:Null}" VerticalScrollBarVisibility="Hidden" Grid.Column="2">
 
-                <StackPanel>
-                    <Border Style="{StaticResource border}" Width="auto" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0">
+                <StackPanel Background="{x:Null}">
+                    <Border Style="{StaticResource border}" Background="{x:Null}" Width="auto" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0">
 
                         <Image Source="{Binding ImageUrl}" Width="auto" Height="auto"/>
                     </Border>

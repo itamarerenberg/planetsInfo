@@ -101,3 +101,16 @@ C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\Fi
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\Dictionary.baml
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.g.cs
 C:\Users\erenb\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\FilterUserControl.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.Chart.dll
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.dll
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Data.dll
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\BL.dll.config
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.xml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.Chart.xml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Data.xml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.Navigation.dll
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Themes.Fluent.dll
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Controls.Navigation.xml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchUserControl.g.cs
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\obj\Debug\UserControls\SearchUserControl.baml
+C:\Users\elchanan\source\repos\planetsInfo\planetsInfo\bin\Debug\Telerik.Windows.Themes.Material.dll

@@ -43,6 +43,11 @@ namespace planetsInfo.ViewModels
             get => new ObservableCollection<string>(model.Astroids.Select(A => A.name));
         }
 
+        public string ImageUri
+        {
+            get => "https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes%2Fastroid.png?alt=media&token=d282399c-feb7-4fde-8b49-524304e98d77";
+        }
+
         string selectedAstroidName;
 
         public string SelectedAstroidName 

@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:converters="clr-namespace:planetsInfo.converters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
 
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
@@ -15,18 +17,18 @@
             <converters:FilterParamsCreator x:Key="ParamsColector"/>
         </ResourceDictionary>
     </UserControl.Resources>
-    <StackPanel>
+    <StackPanel Orientation="Horizontal" Height="34" HorizontalAlignment="Center">
 
-        <StackPanel>
-            <DatePicker Name="dpFrom" SelectedDate="{x:Static sys:DateTime.Now}"/>
-            <DatePicker Name="dpUntil" SelectedDate="{x:Static sys:DateTime.Now}"/>
+        <StackPanel Orientation="Horizontal">
+            <DatePicker Name="dpFrom" Foreground="White" Height="34" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <DatePicker Name="dpUntil" Foreground="White" Height="34" SelectedDate="{x:Static sys:DateTime.Now}"/>
         </StackPanel>
-        <StackPanel>
-            <TextBox Name="tbMinDiameter" Text="0"/>
-            <TextBox Name="tbMaxDiameter" Text="2"/>
-            <CheckBox Name="cbIsDengarouse"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Name="tbMinDiameter" Foreground="White" VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Min Diameter" Height="34" Width="100"/>
+            <TextBox Name="tbMaxDiameter" Foreground="White" VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Max Diameter" Height="34" Width="100"/>
+            <CheckBox Name="cbIsDengarouse" Foreground="White" Content="Dangerous"/>
         </StackPanel>
-        <Button x:Name="btnShow" Content="display" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="172" Height="31"
+        <Button x:Name="btnShow" Content="display" Margin="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="172" Height="30"
                 Command="{Binding FilterCmnd}">
             <Button.CommandParameter>
                 <MultiBinding Converter="{StaticResource ParamsColector}">

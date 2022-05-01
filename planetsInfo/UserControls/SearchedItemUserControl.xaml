@@ -6,61 +6,57 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="500">
+             d:DesignHeight="400" d:DesignWidth="300">
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
-    <Grid Height="300" Width="500" Visibility="{Binding HasContent, Converter={StaticResource BoolToVisabilityConverter}}">
+    <Grid Height="400" Width="300" Visibility="{Binding HasContent, Converter={StaticResource BoolToVisabilityConverter}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Height="auto" Grid.Column="0">
-            <!--title-->
-            <materialDesign:Card>
-                <StackPanel Orientation="Horizontal">
-                    <Label Name="ltitle" Content="title: "/>
-                    <TextBlock Name="tbtitle" Text="{Binding Path=title}"/>
-                </StackPanel>
-            </materialDesign:Card>
-            <!--nasa_id-->
-            <materialDesign:Card>
-                <StackPanel Orientation="Horizontal">
-                    <Label Name="lnasa_id" Content="general info: "/>
-                    <TextBlock Name="tbnasa_id" Text="{Binding Path=nasa_id}"/>
-                </StackPanel>
-            </materialDesign:Card>
-            <!--date_created-->
-            <materialDesign:Card>
-                <StackPanel Orientation="Horizontal">
-                    <Label Name="ldate_created" Content="date_created: "/>
-                    <TextBlock Name="tbdate_created" Text="{Binding Path=date_created}"/>
-                </StackPanel>
-            </materialDesign:Card>
+        <Border Style="{StaticResource border}" BorderThickness="1" Background="AliceBlue">
+            <StackPanel Height="auto" Grid.Column="0">
+                <Border Style="{StaticResource border}">
+                    <StackPanel>
+                        <Image Source="{Binding Path=imgUri}" Width="auto" Height="auto"/>
+                    </StackPanel>
+                </Border>
+                <!--title-->
+                <Border Style="{StaticResource border}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="ltitle" Text="title: "/>
+                        <TextBlock Name="tbtitle" Text="{Binding Path=title}"/>
+                    </StackPanel>
+                </Border>
+                <!--nasa_id-->
+                <Border Style="{StaticResource border}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="lnasa_id" Text="general info: "/>
+                        <TextBlock Name="tbnasa_id" Text="{Binding Path=nasa_id}"/>
+                    </StackPanel>
+                </Border>
+                <!--date_created-->
+                <Border Style="{StaticResource border}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="ldate_created" Text="date_created: "/>
+                        <TextBlock Name="tbdate_created" Text="{Binding Path=date_created}"/>
+                    </StackPanel>
+                </Border>
 
-            <!--description-->
-            <materialDesign:Card>
-                <StackPanel Orientation="Horizontal">
-                    <Label Name="ldescription" Content="description: "/>
-                    <TextBlock Name="tbdescription" Text="{Binding Path=description}"/>
-                </StackPanel>
-            </materialDesign:Card>
-            <!--location-->
-            <materialDesign:Card>
-                <StackPanel Orientation="Horizontal">
-                    <Label Name="llocation" Content="location: "/>
-                    <TextBlock Name="tblocation" Text="{Binding Path=location}"/>
-                </StackPanel>
-            </materialDesign:Card>
-
-
+                
+                <!--location-->
+                <Border Style="{StaticResource border}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="llocation" Text="location: "/>
+                        <TextBlock Name="tblocation" Text="{Binding Path=location}"/>
+                    </StackPanel>
+                </Border>
 
 
-            <materialDesign:Card>
-                <StackPanel>
-                    <Image Source="{Binding Path=imgUri}" Width="auto" Height="auto"/>
-                </StackPanel>
-            </materialDesign:Card>
-        </StackPanel>
+
+
+
+            </StackPanel>
+        </Border>
     </Grid>
 </UserControl>

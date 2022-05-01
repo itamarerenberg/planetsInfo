@@ -40,9 +40,16 @@ namespace BL
             return dlc.GetPlanet(planet_name);
         }
 
-        public IEnumerable<BE.Search.Item> SearchPlanet(string search)
+        public IEnumerable<BE.SearchItem> SearchPlanet(string search)
         {
-            return dlc.GetSearchResult(search);
+            return dlc.GetSearchResult(search).Select(item=>new SearchItem() {
+                title = item.data.First().title,
+                nasa_id = item.data.First().nasa_id,
+                date_created = item.data.First().date_created,
+                description = item.data.First().description,
+                location = item.data.First().location,
+                imgUri = item.links.First().href
+            });
         }
 
         public IEnumerable<Astroid> GetNearEarthAstroid(DateTime from, DateTime until, float min, float max, bool? isDengerous)

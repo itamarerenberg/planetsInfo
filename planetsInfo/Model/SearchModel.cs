@@ -7,30 +7,27 @@ using System.Threading.Tasks;
 
 namespace planetsInfo.Model
 {
-    class SearchResultPanelModel
+    class SearchModel
     {
-        ObservableCollection<BE.SearchItem> items;
-        public ObservableCollection<BE.SearchItem> Items
+        ObservableCollection<BE.Search.Item> items;
+        public ObservableCollection<BE.Search.Item> Items
         {
             get
             {
                 if (items == null)
-                    items = new ObservableCollection<BE.SearchItem>();
+                    items = new ObservableCollection<BE.Search.Item>();
                 return items;
             }
         }
-
-        
         public BL.BLClass BLClass;
-        public SearchResultPanelModel()
+        public SearchModel()
         {
             BLClass = BL.BLClass.Instance;
         }
 
         public void LoadData(string search)
         {
-
-            items = new ObservableCollection<BE.SearchItem>(BLClass.SearchPlanet(search));
+            //items = new ObservableCollection<BE.Search.Item>(BLClass.SearchPlanet(search));
         }
     }
 }

@@ -15,37 +15,42 @@ namespace planetsInfo.ViewModels
 
         SearchResultPanelModel model;
 
-        public ObservableCollection<string> ObjectId
+        public ObservableCollection<BE.SearchItem> ObjectId
         {
-            get => new ObservableCollection<string>(model.Items.Select(I => I.data.First().nasa_id));
+            get => new ObservableCollection<BE.SearchItem>(model.Items);
         }
 
-        string selectedItemId;
-        public string SelectedItemId
+        public string Image
         {
-            get => selectedItemId;
-            set
-            {
-                selectedItemId = value;
-                if (PropertyChanged != null)
-                {
-                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedItemId)));
-                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedItem)));
-                }
-            }
+            get => "https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes%2FNEO.png?alt=media&token=d1d04f2e-52fc-4e42-b077-187bbf389bf3";
         }
 
-        public SearchResultViewModel SelectedItem
-        {
-            get
-            {
-                if (selectedItemId == null)
-                {
-                    return new SearchResultViewModel();
-                }
-                return new SearchResultViewModel(model.Items.First(I => I.data.First().nasa_id == selectedItemId));
-            }
-        }
+        //string selectedItemId;
+        //public string SelectedItemId
+        //{
+        //    get => selectedItemId;
+        //    set
+        //    {
+        //        selectedItemId = value;
+        //        if (PropertyChanged != null)
+        //        {
+        //            PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedItemId)));
+        //            PropertyChanged(this, new PropertyChangedEventArgs(nameof(SelectedItem)));
+        //        }
+        //    }
+        //}
+
+        //public SearchResultViewModel SelectedItem
+        //{
+        //    get
+        //    {
+        //        if (selectedItemId == null)
+        //        {
+        //            return new SearchResultViewModel();
+        //        }
+        //        return new SearchResultViewModel(model.Items.First(I => I.data.First().nasa_id == selectedItemId));
+        //    }
+        //}
 
         public SearchResultPanelViewModel(string search = "moon")
         {
