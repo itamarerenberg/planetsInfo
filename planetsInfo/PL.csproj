@@ -79,6 +79,7 @@
     </ApplicationDefinition>
     <Compile Include="commands\FilterCommand.cs" />
     <Compile Include="commands\OpenFilterTabCommand.cs" />
+    <Compile Include="commands\SwitchDisplayCommand.cs" />
     <Compile Include="converters\BoolToVisabilityConvertor.cs" />
     <Compile Include="converters\FilterParamsCreator.cs" />
     <Compile Include="Model\AstroidPanelUC_M.cs" />
@@ -105,6 +106,7 @@
       <DependentUpon>SSPanelUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AstroidPanelUC_VM.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\NEOUC_VM.cs" />
     <Compile Include="ViewModels\PlanetInfo_UC_VM.cs" />
     <Compile Include="ViewModels\SearchResultPanelViewModel.cs" />
@@ -115,6 +117,9 @@
     </Compile>
     <Compile Include="ViewModels\AstroidViewModel.cs" />
     <Compile Include="Model\NEOModel.cs" />
+    <Compile Include="View\MainWindowFinal.xaml.cs">
+      <DependentUpon>MainWindowFinal.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dictionary.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -160,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SSPanelUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainWindowFinal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
