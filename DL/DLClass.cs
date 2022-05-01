@@ -123,41 +123,41 @@ namespace DL
 
         }
 
-        //private List<Search.Item> ItemsByImagga(string search, ref RestClient client, ref RestRequest request, ref IRestResponse response, Search.Root searchResult)
-        //{
-        //    int i = 0;
-        //    List<Search.Item> result = new List<Search.Item>();
-        //    foreach (var item in searchResult.collection.items)
-        //    {
-        //        var imagga = item.links.First().href;
-        //        string apiKey = IMAGGA_API_KEY;
-        //        string apiSecret = IMAGGA_API_SECRET;
+        private List<Search.Item> ItemsByImagga(string search, ref RestClient client, ref RestRequest request, ref IRestResponse response, Search.Root searchResult)
+        {
+            int i = 0;
+            List<Search.Item> result = new List<Search.Item>();
+            foreach (var item in searchResult.collection.items)
+            {
+                var imagga = item.links.First().href;
+                string apiKey = IMAGGA_API_KEY;
+                string apiSecret = IMAGGA_API_SECRET;
 
-        //        string basicAuthValue = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}:{1}", apiKey, apiSecret)));
+                string basicAuthValue = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(String.Format("{0}:{1}", apiKey, apiSecret)));
 
-        //        client = new RestClient("https://api.imagga.com/v2/tags");
-        //        client.Timeout = -1;
+                client = new RestClient("https://api.imagga.com/v2/tags");
+                client.Timeout = -1;
 
-        //        request = new RestRequest(Method.GET);
-        //        request.AddParameter("image_url", imagga);
-        //        request.AddHeader("Authorization", String.Format("Basic {0}", basicAuthValue));
+                request = new RestRequest(Method.GET);
+                request.AddParameter("image_url", imagga);
+                request.AddHeader("Authorization", String.Format("Basic {0}", basicAuthValue));
 
-        //        response = client.Execute(request);
-        //        var res = JsonConvert.DeserializeObject<ImaggaTags.Root>(response.Content);
-        //        foreach (var tag in res.result.tags)
-        //        {
-        //            if (tag.tag.en == search && tag.confidence == 100)
-        //            {
-        //                result.Add(item);
-        //            }
-        //        }
-        //        if (i++ == 10)
-        //        {
-        //            break;
-        //        }
-        //    }
+                response = client.Execute(request);
+                var res = JsonConvert.DeserializeObject<ImaggaTags.Root>(response.Content);
+                foreach (var tag in res.result.tags)
+                {
+                    if (tag.tag.en == search && tag.confidence == 100)
+                    {
+                        result.Add(item);
+                    }
+                }
+                if (i++ == 10)
+                {
+                    break;
+                }
+            }
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }

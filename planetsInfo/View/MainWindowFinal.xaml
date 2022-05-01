@@ -10,7 +10,7 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
         mc:Ignorable="d"
-        Title="MainWindowFinal" Height="450" Width="800">
+        Title="MainWindowFinal" Height="450" Width="800" WindowState="Maximized">
     <Window.Resources>
         <sys:Double x:Key="CloseMenuWidth">70</sys:Double>
         <sys:Double x:Key="OpenMenueWidth">200</sys:Double>
@@ -24,12 +24,18 @@
         <Duration x:Key="Duration">0:0:0.25</Duration>
         
     </Window.Resources>
-    <Grid Width="auto">
+    <Grid Width="auto" Background="DarkBlue">
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="{Binding ImageUri}"/>
+        </Grid.Background>-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="spMenu" HorizontalAlignment="Left" Width="{StaticResource CloseMenuWidth}" Grid.Column="0">
+        <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,50" x:Name="spMenu" HorizontalAlignment="Left" Width="{StaticResource CloseMenuWidth}" Grid.Column="0">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="{Binding ImageUri}"/>
+            </StackPanel.Background>
             <StackPanel.Triggers>
                 <!--open menu trigger-->
                 <EventTrigger RoutedEvent="MouseEnter">
@@ -49,25 +55,11 @@
                 </EventTrigger>
             </StackPanel.Triggers>
             
-            <Button x:Name="btnSolarSystem" Command="{Binding SwitchDisplayCmnd}" HorizontalAlignment="Left"
-                    Width="{StaticResource OpenMenueWidth}" Style="{StaticResource MaterialDesignFlatAccentBgButton}" 
-                    Height="40" FontSize="10">
-                <Button.CommandParameter>
-                    SolarSystemPanel
-                </Button.CommandParameter>
-                <Grid Width="{StaticResource OpenMenueWidth}" HorizontalAlignment="Left">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                    </Grid.ColumnDefinitions>
-                    <materialDesign:PackIcon Width="{StaticResource IconSize}" Kind="Planet" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
-                    <Label Content="Solar System Planets" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" VerticalContentAlignment="Center" Width="auto"/>
-                </Grid>
-            </Button>
+           
             
             <Button x:Name="btnPODPanel" Command="{Binding SwitchDisplayCmnd}" HorizontalAlignment="Left"
                     Width="{StaticResource OpenMenueWidth}" Style="{StaticResource MaterialDesignFlatAccentBgButton}"
-                    Height="40">
+                    Height="40" Background="DarkBlue">
                 <Button.CommandParameter>
                     PODPanel
                 </Button.CommandParameter>
@@ -76,14 +68,30 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <materialDesign:PackIcon Width="{StaticResource IconSize}" Kind="Camera" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
-                    <Label Content="Picture Of The Day" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
+                    <materialDesign:PackIcon Foreground="White" Width="{StaticResource IconSize}" Kind="Camera" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
+                    <Label Content="Image Of The Day" Foreground="White" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
                 </Grid>
             </Button>
 
+            <Button x:Name="btnSolarSystem" Command="{Binding SwitchDisplayCmnd}" HorizontalAlignment="Left"
+                    Width="{StaticResource OpenMenueWidth}" Style="{StaticResource MaterialDesignFlatAccentBgButton}" 
+                    Height="40" FontSize="10" Background="DarkBlue">
+                <Button.CommandParameter>
+                    SolarSystemPanel
+                </Button.CommandParameter>
+                <Grid Width="{StaticResource OpenMenueWidth}" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <materialDesign:PackIcon Foreground="White" Width="{StaticResource IconSize}" Kind="AtomVariant" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
+                    <Label Content="Planets Information" Foreground="White" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" VerticalContentAlignment="Center" Width="auto"/>
+                </Grid>
+            </Button>
+            
             <Button x:Name="btnAstroidPanel" Command="{Binding SwitchDisplayCmnd}" HorizontalAlignment="Left"
                     Width="{StaticResource OpenMenueWidth}" Style="{StaticResource MaterialDesignFlatAccentBgButton}"
-                    Height="40">
+                    Height="40" Background="DarkBlue">
                 <Button.CommandParameter>
                     AstroidPanel
                 </Button.CommandParameter>
@@ -92,14 +100,14 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <materialDesign:PackIcon Width="{StaticResource IconSize}" Kind="Camera" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
-                    <Label Content="Near Earth Objects" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
+                    <materialDesign:PackIcon Foreground="White" Width="{StaticResource IconSize}" Kind="Meteor" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
+                    <Label Content="Near-Earth Objects" Foreground="White" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
                 </Grid>
             </Button>
 
             <Button x:Name="btnSearchPanel" Command="{Binding SwitchDisplayCmnd}" HorizontalAlignment="Left"
                     Width="{StaticResource OpenMenueWidth}" Style="{StaticResource MaterialDesignFlatAccentBgButton}"
-                    Height="40">
+                    Height="40" Background="DarkBlue">
                 <Button.CommandParameter>
                     SearchPanel
                 </Button.CommandParameter>
@@ -108,8 +116,8 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <materialDesign:PackIcon Width="{StaticResource IconSize}" Kind="Camera" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
-                    <Label Content="Search Media" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
+                    <materialDesign:PackIcon Foreground="White" Width="{StaticResource IconSize}" Kind="Search" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,8,0,2.667"/>
+                    <Label Content="Search Media" Foreground="White" Grid.Column="1" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="auto" FontSize="10"/>
                 </Grid>
             </Button>
         </StackPanel>

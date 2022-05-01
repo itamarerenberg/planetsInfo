@@ -6,21 +6,21 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="500">
+             d:DesignHeight="450" d:DesignWidth="700">
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
-    <Border Style="{StaticResource border}" Background="Cyan" Visibility="{Binding HasContent, Converter={StaticResource BooleanToVisibilityConverter}}">
-        <StackPanel>
+    <Border Style="{StaticResource border}" Background="DarkBlue" Visibility="{Binding HasContent, Converter={StaticResource BooleanToVisibilityConverter}}" Width="1200">
+        <StackPanel HorizontalAlignment="Left">
 
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="name: " FontSize="40" Style="{StaticResource text1}"/>
+            <StackPanel Width="600">
+                <StackPanel Orientation="Horizontal" Width="auto">
+                    <TextBlock Text="Name: " FontSize="40" Style="{StaticResource text1}"/>
 
                     <TextBlock TextWrapping="Wrap" FontSize="40" Text="{Binding name}" Style="{StaticResource text1}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="id: " FontSize="40" Style="{StaticResource text1}"/>
+                    <TextBlock Text="Id: " FontSize="40" Style="{StaticResource text1}"/>
 
                     <TextBlock TextWrapping="Wrap" FontSize="40" Text="{Binding id}" Style="{StaticResource text1}"/>
                 </StackPanel>
@@ -28,32 +28,32 @@
 
 
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Width="auto">
                 <StackPanel >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="nasa_jpl_url: " Style="{StaticResource text1}"/>
+                        <TextBlock Text="Nasa Jpl Url: " Style="{StaticResource text1}"/>
 
                         <TextBlock TextWrapping="Wrap" Text="{Binding nasa_jpl_url}" Style="{StaticResource text1}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="absolute_magnitude_h: " Style="{StaticResource text1}"/>
+                        <TextBlock Text="Absolute Magnitude H: " Style="{StaticResource text1}"/>
 
                         <TextBlock TextWrapping="Wrap" Text="{Binding absolute_magnitude_h}" Style="{StaticResource text1}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="estimated_diameter_min: " Style="{StaticResource text1}"/>
+                        <TextBlock Text="Estimated Diameter Min: " Style="{StaticResource text1}"/>
 
                         <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_min}" Style="{StaticResource text1}"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="estimated_diameter_max: " Style="{StaticResource text1}"/>
+                        <TextBlock Text="Estimated Diameter Max: " Style="{StaticResource text1}"/>
 
                         <TextBlock TextWrapping="Wrap" Text="{Binding estimated_diameter_max}" Style="{StaticResource text1}"/>
                     </StackPanel>
                 </StackPanel>
-                <StackPanel>
-                    <CheckBox Content="is_potentially_hazardous_asteroid" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7"/>
-                    <CheckBox Content="is_sentry_object" IsChecked="{Binding is_sentry_object}" Grid.Row="8"/>
+                <StackPanel VerticalAlignment="Bottom">
+                    <CheckBox Content="Potentially Hazardous Asteroid" FontSize="10" Foreground="White" IsChecked="{Binding is_potentially_hazardous_asteroid}" Grid.Row="7" AllowDrop="False"/>
+                    <CheckBox Content="Sentry Object" Foreground="White" FontSize="10" IsChecked="{Binding is_sentry_object}" Grid.Row="8"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

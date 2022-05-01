@@ -10,6 +10,8 @@
         <Setter Property="Height" Value="auto"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontSize" Value="15"/>
+
 
     </Style>
     <Style TargetType="TextBlock" x:Key="text1">
@@ -18,7 +20,8 @@
         <Setter Property="Height" Value="auto"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Margin" Value="5"/>
-        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="White"/>
 
     </Style>
     <Style TargetType="materialDesign:Card" x:Key="textCard">
