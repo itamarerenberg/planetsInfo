@@ -56,9 +56,14 @@
       <HintPath>packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -68,6 +73,26 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Controls.for.Wpf.Xaml.Trial.2022.1.222\lib\net45\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Controls.Chart.for.Wpf.Trial.2022.1.222\lib\net45\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Controls.Navigation.for.Wpf.Xaml.Trial.2022.1.222\lib\net45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Data.for.Wpf.Xaml.Trial.2022.1.222\lib\net45\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Fluent, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Themes.Fluent.for.Wpf.Trial.2022.1.222\lib\net45\Telerik.Windows.Themes.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Material, Version=2022.1.222.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>packages\Telerik.Windows.Themes.Material.for.Wpf.Trial.2022.1.222\lib\net45\Telerik.Windows.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -85,6 +110,7 @@
     <Compile Include="Model\AstroidPanelUC_M.cs" />
     <Compile Include="Model\FilterAstroParams_M.cs" />
     <Compile Include="Model\PlanetInfo_UC_M.cs" />
+    <Compile Include="Model\SearchModel.cs" />
     <Compile Include="Model\SearchResultPanelModel.cs" />
     <Compile Include="Model\SSPanelUC_M.cs" />
     <Compile Include="UserControls\AstroidPanelUC.xaml.cs">
@@ -102,6 +128,9 @@
     <Compile Include="UserControls\SearchPanelUserControl.xaml.cs">
       <DependentUpon>SearchPanelUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SearchUserControl.xaml.cs">
+      <DependentUpon>SearchUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SSPanelUC.xaml.cs">
       <DependentUpon>SSPanelUC.xaml</DependentUpon>
     </Compile>
@@ -111,6 +140,7 @@
     <Compile Include="ViewModels\PlanetInfo_UC_VM.cs" />
     <Compile Include="ViewModels\SearchResultPanelViewModel.cs" />
     <Compile Include="ViewModels\SearchResultViewModel.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\SSPlanetUC_VM.cs" />
     <Compile Include="UserControls\AstroidUC.xaml.cs">
       <DependentUpon>AstroidUC.xaml</DependentUpon>
@@ -141,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SearchPanelUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SearchUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

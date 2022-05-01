@@ -11,24 +11,28 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="800"/>
-        </Grid.ColumnDefinitions>
-        <materialDesign:Card>
-            <StackPanel>
-                <Button Command="{Binding OpenFilterTab}" Grid.Column="2"  Height="20" Width="100"/>
-                <local:FilterUserControl Visibility="Hidden" x:Name="filteruc"/>
-                <ListView x:Name="lvAstroids" Width="auto" ItemsSource="{Binding AstroidsNames}" SelectionMode="Single" SelectedItem="{Binding SelectedAstroidName}">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignChoiceChipListBoxItem}">
-
-                        </Style>
-                    </ListView.ItemContainerStyle>
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="{Binding ImageUri}"/>
+        </StackPanel.Background>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:FilterUserControl Visibility="Visible" x:Name="filteruc"/>
+        </StackPanel>
+        <Border Style="{StaticResource border}" Width="800">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Background="Blue">
+                <ListView Background="Blue" x:Name="lvAstroids" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False" Height="600" Width="auto" ItemsSource="{Binding AstroidsNames}" SelectionMode="Single" SelectedItem="{Binding SelectedAstroidName}">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Foreground" Value="White"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        
                 </ListView>
+                </StackPanel>
+                <planetsInfo:AstroidUC Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" DataContext="{Binding Path=SelectedAstroid}" Width="auto" Height="350"/>
+
             </StackPanel>
-        </materialDesign:Card>
-        <planetsInfo:AstroidUC Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" DataContext="{Binding Path=SelectedAstroid}" Width="auto" Height="350"/>
-    </Grid>
+        </Border>
+    </StackPanel>
 </UserControl>

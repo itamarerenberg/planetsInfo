@@ -301,6 +301,10 @@ namespace planetsInfo.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public string Image
+        {
+            get => "https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes%2FESA_root_pillars.png?alt=media&token=fb981519-c395-40a4-a0cb-decfa0171efd";
+        }
         public PlanetInfo_UC_VM(string planetName = null)
         {
             if (planetName == null)

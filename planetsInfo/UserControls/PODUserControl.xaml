@@ -6,50 +6,92 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:planetsInfo"
              mc:Ignorable="d" 
-             d:DesignHeight="200" d:DesignWidth="400"
+             d:DesignHeight="800" d:DesignWidth="800"
              
              >
-    
-    <Grid Margin="0,0,0,0" Background="{x:Null}" RenderTransformOrigin="0.109,-0.059">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="7*"/>
-        </Grid.RowDefinitions>
-        
-        <materialDesign:Card Width="auto" Height="auto">
-            <TextBlock  TextWrapping="Wrap" Text="Picture of The Day" Width="auto" Height="auto" TextAlignment="Center" />
-        </materialDesign:Card>
-        <Grid Grid.Row="1">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Dictionary.xaml"/>
+    </UserControl.Resources>
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="{Binding ImageUri}"/>
+        </StackPanel.Background>
+
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <materialDesign:Card Height="auto" Width="auto">
-                <TextBlock x:Name="tbDescription" Text="{Binding Description}" Margin="10,10,0,0" TextWrapping="Wrap"/>
-            </materialDesign:Card>
-            <Grid Grid.Column="1">
+            <StackPanel Grid.Column="1">
+                <Border Style="{StaticResource border}" Margin="150,0" Width="auto" Height="auto" HorizontalAlignment="Left">
+                    <TextBlock  TextWrapping="Wrap" Foreground="White" FontSize="30" Text="Image of The Day" Width="auto" Height="auto" TextAlignment="Center" />
+                </Border>
+                <Border Style="{StaticResource border}" Height="500">
+                    <Image  x:Name="ImgPOD" Source="{Binding ImgUri}" Height="500" Width="auto" />
+                </Border>
+
+                <Border Style="{StaticResource border}" Width="auto" Height="auto" HorizontalAlignment="Center">
+                    <TextBlock x:Name="tbTitle" TextAlignment="Center" FontSize="20" Foreground="White" Text="{Binding Title}" Height="auto"  TextWrapping="Wrap" Width="auto"/>
+                </Border>
+                <Border Style="{StaticResource border}" HorizontalAlignment="Center">
+                    <TextBlock x:Name="tbDate" TextAlignment="Center" Foreground="White" Text="{Binding Date}" HorizontalAlignment="Left" Height="auto" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto"/>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Column="0">
+                <Border Style="{StaticResource border}" Margin="0,50" Height="500" Width="200" HorizontalAlignment="Right">
+                    <ScrollViewer VerticalScrollBarVisibility="Hidden" Margin="0,10">
+                        <TextBlock x:Name="tbDescription" Foreground="White" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Hidden" Text="{Binding Description}" Height="500" Width="200" TextWrapping="Wrap"/>
+                    </ScrollViewer>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+    <!--<Grid Margin="0,0,0,0" Background="{x:Null}" RenderTransformOrigin="0.109,-0.059">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        
+        <Border Style="{StaticResource border}" Width="auto" Height="auto">
+            <TextBlock  TextWrapping="Wrap" Text="Picture of The Day" Width="auto" Height="auto" TextAlignment="Center" />
+        </Border>
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <Border Style="{StaticResource border}"  Height="auto" Width="100" HorizontalAlignment="Right">
+                <TextBlock x:Name="tbDescription" Text="{Binding Description}" Margin="312,0,0,382" TextWrapping="Wrap"/>
+                </Border>
+            </ScrollViewer>
+            <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-                <materialDesign:Card Height="auto" Width="auto" >
-                    <!--<materialDesign:Card.Background>
+                <Border Style="{StaticResource border}" Height="300">
+                    -->
+    <!--<materialDesign:Card.Background>
                         <ImageBrush ImageSource="{Binding ImgUri}"/>
                     </materialDesign:Card.Background>-->
+    <!--
                     <Image  x:Name="ImgPOD" Source="{Binding ImgUri}" Height="auto" Width="auto" />
-                </materialDesign:Card>
-                <materialDesign:Card Grid.Row="1" Width="auto" Height="auto">
+                </Border>
+                <Border Style="{StaticResource border}" Grid.Row="1" Width="auto" Height="auto">
                 <TextBlock x:Name="tbTitle" Text="{Binding Title}" Height="auto"  TextWrapping="Wrap" Width="auto"/>
-            </materialDesign:Card>
-           
-            
-            <materialDesign:Card Grid.Row="2">
+            </Border>
+
+
+                <Border Style="{StaticResource border}" Grid.Row="2">
                 <TextBlock x:Name="tbDate" Text="{Binding Date}" HorizontalAlignment="Left" Height="auto" TextWrapping="Wrap" VerticalAlignment="Top" Width="auto"/>
-            </materialDesign:Card>
+            </Border>
             
-            <!--<DatePicker SelectedDate="{Binding DateTime}" HorizontalAlignment="Left" Margin="21,165,0,0" VerticalAlignment="Top"/>-->
+            -->
+    <!--<DatePicker SelectedDate="{Binding DateTime}" HorizontalAlignment="Left" Margin="21,165,0,0" VerticalAlignment="Top"/>-->
+    <!--
         </Grid>
         </Grid>
-    </Grid>
+    </Grid>-->
 </UserControl>

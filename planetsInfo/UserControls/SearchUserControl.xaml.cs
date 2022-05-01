@@ -13,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PL
+namespace planetsInfo.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SearchUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SearchUserControl : UserControl
     {
-        public MainWindow()
+        public SearchUserControl()
         {
-
             InitializeComponent();
         }
-        public string Image
-        {
-            get => "https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes%2FESA_root_pillars.png?alt=media&token=fb981519-c395-40a4-a0cb-decfa0171efd";
-
-        }
-
-  
     }
 }

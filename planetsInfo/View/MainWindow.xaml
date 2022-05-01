@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:PL"
         xmlns:planetsInfo="clr-namespace:planetsInfo" xmlns:UserControls="clr-namespace:planetsInfo.UserControls" x:Class="PL.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="800" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
-        FontFamily="{materialDesign:MaterialDesignFont}" WindowState="Maximized">
+        FontFamily="{materialDesign:MaterialDesignFont}" Name="mw" WindowState="Maximized">
     <!--<Window.Background>
-        <ImageBrush ImageSource="C:\Users\erenb\source\repos\planetsInfo\thems\backgrownd1.jpg"/>
+        <ImageBrush ImageSource="{Binding Image}"/>
     </Window.Background>-->
 
     <Grid>
@@ -20,10 +20,11 @@
             <TabItem>
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal">
+                        
                     <TextBlock Text="SolarSystem" TextAlignment="Center" Width="auto" Background="Yellow"/>
                     </StackPanel>
                 </TabItem.Header>
-                <UserControls:SSPanelUC/>
+                <UserControls:SSPanelUC Background="{x:Null}"/>
             </TabItem>
             <TabItem>
                 <TabItem.Header>
