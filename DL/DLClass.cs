@@ -113,13 +113,13 @@ namespace DL
             request.AddParameter("media_type", "image");
             IRestResponse response = client.Execute(request);
             var searchResult = JsonConvert.DeserializeObject<Search.Root>(response.Content);
-            //List<Search.Item> result = ItemsByImagga(search, ref client, ref request, ref response, searchResult);
-            List<Search.Item> result= new List<Search.Item>();
-            foreach (var item in searchResult.collection.items)
-            {
-                result.Add(item);
-            }
-                return result;
+            List<Search.Item> result = ItemsByImagga(search, ref client, ref request, ref response, searchResult);
+            //List<Search.Item> result= new List<Search.Item>();
+            //foreach (var item in searchResult.collection.items)
+            //{
+            //    result.Add(item);
+            //}
+            return result;
 
         }
 

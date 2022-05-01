@@ -7,7 +7,7 @@
              xmlns:controls="using:Microsoft.UI.Xaml.Controls"
              xmlns:local="clr-namespace:planetsInfo.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="800">
     <UserControl.Resources>
         <ResourceDictionary Source="/Dictionary.xaml"/>
     </UserControl.Resources>
@@ -17,31 +17,19 @@
             <ImageBrush ImageSource="https://firebasestorage.googleapis.com/v0/b/planets-9419d.appspot.com/o/themes/Silhouette-Milkyway.png?alt=media;token=b4a391bc-9574-4fec-b62e-ca9e0872134c"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Background="Yellow" Style="{StaticResource border}">
-            <StackPanel>
-                <local:PlanetInfoUC x:Name="ucPlanetInfo" DataContext="{Binding SelectedPlanet}" Background="{x:Null}"/>
 
-                <telerik:RadCarousel Background="Black" Name="lbPlanets" VerticalAlignment="Top" Height="250" Width="800" ItemsSource="{Binding Path=planets}" SelectedItem="{Binding Path=SelectedItem}">
-                
-                <telerik:RadCarousel.ItemTemplate>
-                    <DataTemplate>
+        <local:PlanetInfoUC x:Name="ucPlanetInfo" DataContext="{Binding SelectedPlanet}" Background="{x:Null}" Height="auto" Width="800" HorizontalAlignment="Center"/>
 
-                        <Image Source="{Binding planetsImage}" Style="{StaticResource ResourceKey=pic}"/>
+        <telerik:RadCarousel Background="Transparent" Name="lbPlanets" VerticalAlignment="Bottom" Height="200" Width="800" 
+                                     ItemsSource="{Binding Path=planets}" SelectedItem="{Binding Path=SelectedItem}" HorizontalAlignment="Center">
 
-                        <!--<Border Background="Transparent" BorderThickness="0" Width="auto" Height="auto" 
-                                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" 
-                                Grid.Column="2" Style="{StaticResource border}">-->
-                        <!--<TextBlock Text="{Binding planetsName}" Background="{x:Null}" Foreground="Red" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center">-->
-                        <!--</TextBlock>-->
-
-                        <!--</Border>-->
-                    </DataTemplate>
-                </telerik:RadCarousel.ItemTemplate>
-            </telerik:RadCarousel>
-            </StackPanel>
-        </Border>
+            <telerik:RadCarousel.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding planetsImage}" Style="{StaticResource ResourceKey=pic}"/>
+                </DataTemplate>
+            </telerik:RadCarousel.ItemTemplate>
+        </telerik:RadCarousel>
     </Grid>
 </UserControl>

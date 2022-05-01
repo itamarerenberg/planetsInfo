@@ -122,7 +122,7 @@
             </Button>
         </StackPanel>
         <Grid Grid.Column="1">
-            <UserControls:SSPanelUC x:Name="SolarSystemPanel" Visibility="Visible" HorizontalAlignment="Center"/>
+            <UserControls:SSPanelUC x:Name="SolarSystemPanel" Visibility="Visible"/>
             <UserControls:AstroidPanelUC x:Name="AstroidPanel" Visibility="Hidden"/>
             <planetsInfo:PODUserControl x:Name="PODPanel" Visibility="Hidden"/>
             <UserControls:SearchPanelUserControl x:Name="SearchPanel" Visibility="Hidden"/>
